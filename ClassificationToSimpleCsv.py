@@ -1,6 +1,8 @@
 import argparse
 import csv
 
+levels = ["A1", "A2", "B1"]
+
 with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=';')
     i = 0
@@ -18,7 +20,7 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
             pair = row['Пара аспектов']
             transFR = row['По-французски'].split(',')[0]
             transEN = row['По-английски'].split(',')[0]
-            if lvl in ["A1"]:
+            if lvl in levels:
                 if verbRank != "10000":
                     #print(pair)
                     if len(pair) > 22:
@@ -34,8 +36,12 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
                         bigTransENA.append(transEN)
 
     print("num row: " + str(i))
+    print("------------------------------------------------")
     print("num pairs > 22 chars: " + str(bigPairs))
+    print("big pairs: " + str(bigPairsA))
+    print("------------------------------------------------")
     print("num FR translation > 18 chars: " + str(bigTransFR))
     print("big FR translation: " + str(bigTransFRA))
+    print("------------------------------------------------")
     print("num EN translation > 18 chars: " + str(bigTransEN))
     print("big EN translation: " + str(bigTransENA))
