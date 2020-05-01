@@ -39,6 +39,11 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     print("------------------------------------------------")
     print("num pairs > 22 chars: " + str(bigPairs))
     print("big pairs: " + str(bigPairsA))
+    print("longest pairs: ")
+    ordBigPairsA = sorted(bigPairsA, key=len)
+    for pair in ordBigPairsA:
+        print(pair + " :" + str(len(pair)))
+
     print("------------------------------------------------")
     print("num FR translation > 18 chars: " + str(bigTransFR))
     print("big FR translation: " + str(bigTransFRA))
