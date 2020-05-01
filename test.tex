@@ -1,13 +1,11 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{standalone}
+\usepackage{tabularx}
 \usepackage{csvsimple}
 
-\begin{filecontents*}{extract-B2.csv}
-\end{filecontents*}
-
 \begin{document}
-  \begin{tabular}{1|c}%
+  \begin{tabular}{c|c}
   \bfseries verb & \bfseries transFR % % specify table head
-  \csvreader[head to column names]{extract-B2.csv} % use head of csv as column names
-  {\\\hline\verb & \transFR} % specify your columns here
+  \csvreader[head to column names]{extract-B2.csv}{} % use head of csv as column names
+  {\\\verb & \transFR} % specify your columns here
   \end{tabular}
 \end{document}
