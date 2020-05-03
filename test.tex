@@ -1,0 +1,15 @@
+\documentclass[12pt]{article}
+\usepackage[default]{droidserif}
+\usepackage[default]{droidsans}
+\usepackage[english,french,russian]{babel}
+\usepackage{fontspec}
+\usepackage{csvsimple}
+
+
+\begin{document}
+  \begin{tabular}{c|c}
+  \bfseries Verb & \bfseries transFR %
+  \csvreader[head to column names]{extract-B2.csv}{} % use head of csv as column names
+  {\\\verb & \transFR} % specify your columns here
+  \end{tabular}
+\end{document}
