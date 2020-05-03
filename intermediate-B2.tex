@@ -1,18 +1,19 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper]{article}
 \usepackage[default]{droidserif}
 \usepackage[default]{droidsans}
 \usepackage[english,french,russian]{babel}
 \usepackage{fontspec}
 \usepackage{csvsimple}
 
-\begin{document}
-  \csvstyle{myStyle}{tabular=|c|c|c|,
-    %head to column names,
-    table head=\hline & Verb & TransFR\\\hline\hline,
-    late after line=\\\hline,
-    head to column names}
+\setlength{\topmargin}{-10.4mm}
 
-  \csvreader[myStyle]{extract-B2.csv}{}%
-    {\thecsvrow & \verb & \transFR} % specify your columns here
+\begin{document}
+  \csvstyle{myStyle}{tabular=l|l}
+    %head to column names,
+    %table head=\hline & Verbe & Traduction\\\hline\hline,
+    %late after line=\\\hline}
+
+  \csvreader[myStyle]{extract-B2.csv}{verb=\verb,transFR=\transFR}%
+    {\verb & \transFR} % specify your columns here
 
 \end{document}
