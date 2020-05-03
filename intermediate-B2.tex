@@ -1,19 +1,26 @@
-\documentclass[a4paper]{article}
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper, margin=0.5cm]{geometry}
 \usepackage[default]{droidserif}
 \usepackage[default]{droidsans}
 \usepackage[english,french,russian]{babel}
+\usepackage{adjustbox}
 \usepackage{fontspec}
 \usepackage{csvsimple}
 
-\setlength{\topmargin}{-10.4mm}
+%\setlength{\topmargin}{-10.4mm}
 
 \begin{document}
-  \csvstyle{myStyle}{tabular=l|l}
+  \csvstyle{myStyle}{
+    before reading=\begin{adjustbox}{max width=5cm},
+    after reading=\end{adjustbox},
+    tabular=l|l
+  }
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
     %late after line=\\\hline}
 
-  \csvreader[myStyle]{extract-B2.csv}{verb=\verb,transFR=\transFR}%
+  \csvreader[myStyle]{extract-B2.csv}
+    {verb=\verb,transFR=\transFR}
     {\verb & \transFR} % specify your columns here
 
 \end{document}
