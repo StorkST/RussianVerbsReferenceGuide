@@ -15,12 +15,11 @@
 \usepackage{fontspec}
 \usepackage{csvsimple}
 
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 %\setlength{\topmargin}{-10.4mm}
 
 \begin{document}
   \csvstyle{myStyle}{
-    tabular=L{4cm}|L{2cm}
+    tabular=p{4cm}|p{2cm}
   }
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
