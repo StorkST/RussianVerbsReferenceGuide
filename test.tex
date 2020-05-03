@@ -1,13 +1,14 @@
-\documentclass[12pt]{standalone}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english,french,russian]{babel}
 \usepackage{tabularx}
 \usepackage{csvsimple}
 
 \begin{document}
-  \begin{tabular}{c|c}
-  \bfseries verb & \bfseries transFR % % specify table head
-  \csvreader[head to column names]{extract-B2.csv}{} % use head of csv as column names
-  {\\\verb & \transFR} % specify your columns here
-  \end{tabular}
+  \csvreader[tabular=|c|c|c|,
+    %head to column names,
+    table head=\hline & Verb & TransFR\\\hline\hline,
+    late after line=\\\hline] %
+    {extract-B2.csv}{verb=\verb,transFR=\transFR} % {} = use head of csv as column names
+    {\thecsvrow & \verb & \transFR} % specify your columns here
 \end{document}
