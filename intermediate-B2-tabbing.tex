@@ -1,0 +1,47 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[
+    a4paper,
+    total={200mm,277mm},
+    left=5mm,
+    right=5mm,
+    top=10mm,
+    bottom=10mm
+  ]{geometry}
+\usepackage[default]{droidserif}
+\usepackage[default]{droidsans}
+\usepackage[english,french,russian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{fontspec}
+\usepackage{csvsimple}
+
+%\setlength{\topmargin}{-10.4mm}
+\newsavebox\ltmcbox
+
+\begin{document}
+  \begin{multicols}{2}
+  \setbox\ltmcbox\vbox{
+  \makeatletter\col@number\@ne
+
+    \csvreader[
+      tabbing,
+      %head to column names,
+      table head=\hspace*{12em}\=\kill
+    ]{extract-B2.csv}
+      {verb=\verb,transFR=\transFR}
+      {\verb \> \transFR} % specify your columns here
+    %head to column names,
+    %table head=\hline & Verbe & Traduction\\\hline\hline,
+    %late after line=\\\hline}
+  %\csvreader[myStyle]{extract-B2.csv}
+  %  {verb=\verb,transFR=\transFR}
+  %  {\verb & \transFR} % specify your columns here
+  \unskip
+  \unpenalty
+  \unpenalty
+  }
+  \unvbox\ltmcbox
+
+  \end{multicols}
+\end{document}
