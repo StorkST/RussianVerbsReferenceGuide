@@ -1,9 +1,9 @@
-\documentclass[8pt]{extarticle}
+\documentclass[version=last,fontsize=7pt]{scrartcl}
 \usepackage[
     a4paper,
-    %total={200mm,277mm},
-    left=10mm,
-    right=10mm,
+    total={200mm,277mm},
+    left=5mm,
+    right=5mm,
     top=10mm,
     bottom=10mm
   ]{geometry}
@@ -22,13 +22,13 @@
 \setlength{\columnseprule}{0.1pt}
 
 \begin{document}
-  \begin{multicols}{2}
+  \begin{multicols}{4}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
   \csvstyle{myStyle}{
-    longtable=p{25mm}p{15mm} % each column = 40mm. 5 columns = 200mm
-  }
+    longtable=p{22mm}p{15mm} % each column = 40mm. 5 columns = 200mm
+  } % TODO: reduce russian size. Change font ?
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
     %late after line=\\\hline}
