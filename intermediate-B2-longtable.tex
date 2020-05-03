@@ -1,4 +1,4 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[16pt, a4paper]{article}
 \usepackage[
     a4paper,
     total={200mm,277mm},
@@ -19,13 +19,15 @@
 %\setlength{\topmargin}{-10.4mm}
 \newsavebox\ltmcbox
 
+\setlength{\columnseprule}{0.1pt}
+
 \begin{document}
   \begin{multicols}{2}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
   \csvstyle{myStyle}{
-    longtable=p{4cm}|p{2cm}
+    longtable=p{25mm}p{15mm} % each column = 40mm. 5 columns = 200mm
   }
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
