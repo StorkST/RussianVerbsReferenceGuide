@@ -3,17 +3,17 @@
 \usepackage[default]{droidserif}
 \usepackage[default]{droidsans}
 \usepackage[english,french,russian]{babel}
-\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{xltxtra}
 \usepackage{fontspec}
 \usepackage{csvsimple}
 
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 %\setlength{\topmargin}{-10.4mm}
 
 \begin{document}
   \csvstyle{myStyle}{
-    before reading=\begin{adjustbox}{max width=5cm},
-    after reading=\end{adjustbox},
-    tabular=l|l
+    tabular=L{4cm}|L{2cm}
   }
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
