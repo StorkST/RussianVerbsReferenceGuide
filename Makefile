@@ -10,6 +10,9 @@ SAMPLES = sample.tex
 
 all:  $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf} 
 
+build:
+	xelatex intermediate-B2-longtable.tex
+
 clean:
 	$(RM)  *.log *.aux \
 	*.cfg *.glo *.idx *.toc \
