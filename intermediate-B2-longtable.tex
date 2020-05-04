@@ -15,14 +15,16 @@
 \usepackage{multicol}
 \usepackage{fontspec}
 \usepackage{csvsimple}
+\usepackage{adjmulticol}
 
 %\setlength{\topmargin}{-10.4mm}
 \newsavebox\ltmcbox
 
+\setlength{\columnsep}{-10mm} % TODO: make it work. See adjmulticol
 \setlength{\columnseprule}{0.1pt}
 
 \begin{document}
-  \begin{multicols}{4}
+  \begin{adjmulticols}{5}{-5mm}{-18mm}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
@@ -41,5 +43,5 @@
   }
   \unvbox\ltmcbox
 
-  \end{multicols}
+  \end{adjmulticols}
 \end{document}
