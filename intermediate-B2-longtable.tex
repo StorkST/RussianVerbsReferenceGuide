@@ -15,6 +15,7 @@
 \usepackage{csvsimple}
 \usepackage{adjmulticol}
 \setmainfont{XCharter}
+\usepackage[table]{xcolor}
 
 %\setlength{\topmargin}{-10.4mm}
 \newsavebox\ltmcbox
@@ -28,7 +29,7 @@
   \makeatletter\col@number\@ne
 
   \csvstyle{myStyle}{
-    longtable=p{23mm}>{\small}p{14mm} % each column = 40mm. 5 columns = 200mm
+    longtable=>{\small}p{23mm}>{\small}p{14mm} % each column = 40mm. 5 columns = 200mm
   } % TODO: reduce russian size. Change font ?
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
