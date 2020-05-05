@@ -5,7 +5,7 @@ import csv
 levels = ["B2"]
 #levels = ["C1","C2"]
 lengthVerb = 23
-lengthTrans = 17
+lengthTrans = 16
 
 with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=';')
@@ -40,8 +40,9 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
                         if perf.endswith(imperf):
                             lenPrefix = len(perf) - len(imperf)
                             verb = imperf + '/' + perf[0:lenPrefix] + '-'
+                        verb = verb.replace("/", "\slash ")
 
                     #Translation
                     trans = transFR[0:lengthTrans]
 
-                    print(verb + ';' + trans)
+                    print(verb + ',' + trans)
