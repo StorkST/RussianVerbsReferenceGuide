@@ -17,6 +17,8 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     bigTransEN = 0
     bigTransENA = []
 
+    allverbs = []
+
     for row in reader:
             i += 1
             verbRank = row['Ранг ГЛ']
@@ -45,4 +47,9 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
                     #Translation
                     trans = transFR[0:lengthTrans]
 
-                    print(verb + ',' + trans)
+                    allverbs.append(verb + ',' + trans)
+
+    allverbs = sorted(allverbs)
+
+    for verb in allverbs:
+        print(verb)
