@@ -1,9 +1,9 @@
 \documentclass[version=last,fontsize=7pt]{scrartcl}
 \usepackage[
     a4paper,
-    total={210mm,281mm},
-    left=0mm,
-    right=0mm,
+    total={200mm,281mm},
+    left=5mm,
+    right=5mm,
     top=8mm,
     bottom=8mm
   ]{geometry}
@@ -22,12 +22,12 @@
 %\setlength{\topmargin}{-10.4mm}
 \newsavebox\ltmcbox
 
-\setlength{\columnsep}{-14mm} % adjust spacing between columns
+\setlength{\columnsep}{0mm} % adjust spacing between columns
 \setlength{\columnseprule}{0.1pt} % width of drawn line between columns
 \setlength\tabcolsep{0.5mm} % spacing in table: between Russian verbs and translation
 
 \begin{document}
-  \begin{adjmulticols}{4}{}{} %{-5mm}{-14mm}
+  \begin{adjmulticols}{4}{}{}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
@@ -47,6 +47,10 @@
   \unpenalty
   }
   \unvbox\ltmcbox
+
+  \begin{flushleft}
+  TOTO
+  \end{flushleft}
 
   \end{adjmulticols}
 \end{document}
