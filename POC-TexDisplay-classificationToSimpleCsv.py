@@ -2,8 +2,8 @@ import argparse
 import csv
 
 #levels = ["A1", "A2", "B1"]
-levels = ["B2"]
-#levels = ["C1","C2"]
+#levels = ["B2"]
+levels = ["C1","C2"]
 lengthVerb = 23
 lengthTrans = 16
 
