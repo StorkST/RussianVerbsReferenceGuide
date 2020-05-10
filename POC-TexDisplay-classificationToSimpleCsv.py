@@ -2,10 +2,15 @@ import argparse
 import csv
 
 #levels = ["A1", "A2", "B1"]
-#levels = ["B2"]
-levels = ["C1","C2"]
+levels = ["B2"]
+#levels = ["C1","C2"]
 lengthVerb = 23
-lengthTrans = 16
+lengthTrans = 17
+
+colSep = ';'
+transSepBig = ';'
+transSepDst = ','
+
 
 with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=';')
@@ -26,8 +31,8 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
             lvl = row['Уровень']
             infinitive = row['Инфинитив']
             pair = row['Пара аспектов']
-            transFR = row['По-французски'].split(',')[0]
-            transEN = row['По-английски'].split(',')[0]
+            transFR = row['По-французски'].split(transSepBig)[0]
+            transEN = row['По-английски'].split(transSepBig)[0]
             verbData = ""
 
             if lvl in levels:
@@ -46,7 +51,11 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
                         verb = verb.replace("/", "\slash ")
 
                     #Translation
-                    trans = transFR[0:lengthTrans]
+                    if ',' in transFR:
+                        trans = transFR[0:lengthTrans+1]
+                        trans = trans.replace(', ', transSepDst)
+                    else:
+                        trans = transFR[0:lengthTrans]
 
                     if verb not in allVerbsOrder:
                         allVerbsOrder.append(verb)
@@ -55,5 +64,6 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
     allVerbsKeys = allVerbs.keys()
     newVerbsKeys = sorted(allVerbsKeys)
 
+    print("verb" + colSep + "transFR")
     for verb in newVerbsKeys:
-        print(verb + ',' + allVerbs[verb])
+        print(verb + colSep + allVerbs[verb])
