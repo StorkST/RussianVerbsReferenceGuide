@@ -32,10 +32,11 @@
   \makeatletter\col@number\@ne
 
   \csvstyle{myStyle}{
-    longtable=p{44mm}>{\small}p{21mm} % each column = 40mm. 5 columns = 200mm
+    longtable=p{44mm}>{\small}p{21mm}, % each column = 40mm. 5 columns = 200mm
+    separator=semicolon
+  } % TODO: reduce russian size. Change font ?
     %late after head=\\\hline\rowcolor{yellow!50},
     %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}
-  } % TODO: reduce russian size. Change font ?
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
     %late after line=\\\hline}

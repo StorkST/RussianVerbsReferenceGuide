@@ -2,10 +2,10 @@ import argparse
 import csv
 
 #levels = ["A1", "A2", "B1"]
-levels = ["B2"]
-#levels = ["C1","C2"]
+#levels = ["B2"]
+levels = ["C1","C2"]
 lengthVerb = 23
-lengthTrans = 17
+lengthTrans = 16
 
 colSep = ';'
 transSepBig = ';'
@@ -53,7 +53,7 @@ with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
                     #Translation
                     if ',' in transFR:
                         trans = transFR[0:lengthTrans+1]
-                        trans = trans.replace(', ', transSepDst)
+                        #trans = trans.replace(', ', transSepDst)
                     else:
                         trans = transFR[0:lengthTrans]
 
