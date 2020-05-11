@@ -20,6 +20,7 @@ getcsv:
 	curl -s "https://api.github.com/repos/StorkST/CoreRussianVerbs/commits?path=RussianVerbsClassification.csv" | jq -r '.[0].commit.committer.date'
 
 build:
+
 	xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-A1A2B1-abcOrder.csv} \input{tex/a4-4columns.tex}"
 	xelatex -jobname=intermediate-ru-fr-abcOrder "\def\csvfilename{cefr/intermediate-ru-fr-B2-abcOrder.csv} \input{tex/a4-4columns.tex}"
 	xelatex -jobname=advanced-ru-fr-abcOrder "\def\csvfilename{cefr/advanced-ru-fr-C1C2-abcOrder.csv} \input{tex/a4-3columns.tex}"
