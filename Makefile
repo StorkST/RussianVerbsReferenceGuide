@@ -21,7 +21,7 @@ getcsv:
 
 buildBeginner:
 	python3.8 extract-RussianVerbsClassification.py -l A1 A2 B1 -o abc -y Движение > cefr/beginner-ru-fr-abcOrder.csv
-	xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-abcOrder.csv} \input{tex/a4-4columns.tex}"
+	xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-abcOrder.csv} \input{tex/a4-4columns-interline.tex}"
 
 buildIntermediate:
 	python3.8 extract-RussianVerbsClassification.py -l B2 -o abc -y Движение > cefr/intermediate-ru-fr-abcOrder.csv
