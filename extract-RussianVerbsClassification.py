@@ -75,7 +75,7 @@ if __name__ == '__main__':
     order = args.order
 
     columnsName = ""
-    columnsNameA = ["verbs", "usage", "transFr", "transEn"]
+    columnsNameA = ["verb", "usage", "transFr", "transEn"]
     if yellowCol != None:
         columnsNameA.append("yellow")
     for col in columnsNameA:

@@ -9,7 +9,4 @@ max420 rows RU/FR or RU/EN 25chars RU/16 chars fr - ~70 per row :
 xelatex "\def\csvfilename{} \input{a4-3columns.tex}"
 
 TODO:
-  * Replace | by ,
-    * This project: Update .csv declarations for csvsimple
-    * CoreRussianVerbs: Replace characters and find a way to split
-      * For exemple translation for a verb: "mettre, contribuer; placer; allonger" => VerbsSheets keep before semi colons and remove space near ,
+  * remove space after comma if enough to keep it on one line (<16 or 17 chars)

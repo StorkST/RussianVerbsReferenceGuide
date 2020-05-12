@@ -1,0 +1,674 @@
+verb;usage;transFr;transEn;yellow
+адресовать;;adresser;address;not movement
+активизировать;;activer, dynamiser;make more active;not movement
+активировать;;activer;activate;not movement
+анализировать\slash про-;;analyser;analyse;not movement
+аннулировать;;annuler;annul;not movement
+аргументировать;;argumenter;argue;not movement
+арестовывать\slash арестовать;;arrêter;arrest;not movement
+архивировать\slash за-;;archiver;archive;not movement
+ассоциировать;;associer;associate;not movement
+атаковать;;attaquer;attack;not movement
+базироваться\slash базировать;;se fonder sur;rest (on, upon);not movement
+бастовать;;faire grève;strike;movement
+беременеть\slash за-;;devenir enceinte;become pregnant;movement
+беречь\slash по-;что;garder, conserver;guard, keep;not movement
+беседовать;;causer;converse (with);movement
+блокировать;;bloquer;blockade;not movement
+болтать\slash вз-;;agiter;shake up;not movement
+бомбардировать;;bombarder;bomb;not movement
+бормотать\slash про-;;marmonner;mutter;not movement
+бросаться\slash броситься;;se précipiter;dash;not movement
+брызгать\slash брызнуть;;jaillir;splash (on);not movement
+ввозить\slash ввезти;;importer;import;not movement
+вести\slash по-;;mener;move;not movement
+взаимодействовать;;coopérer;interact;movement
+взволновать\slash волновать;;inquiéter;agitate;not movement
+взглядывать\slash взглянуть;;regarder;look (at);movement
+вздрагивать\slash вздрогнуть;;débuter, trembler;start, tremble;movement
+вздыхать\slash вздохнуть;;respirer;sigh;movement
+взламывать\slash взломать;;forcer;break open;not movement
+видеться\slash у-;;se voir;увидеться;not movement
+вкладывать\slash вложить;;mettre, contribuer;put in, contribute;not movement
+включаться\slash включиться;;se joindre à;join (in);not movement
+владеть\slash за-;;posséder;own;movement
+влезать\slash влезть;;grimper (à);climb in(to);movement
+влиять\slash по-;;exercer une influence;influence;movement
+вмешиваться\slash вмешаться;;se mêler de;interfere (in);not movement
+вмещать\slash вместить;;contenir;hold;not movement
+внушать\slash внушить;;inspirer;suggest;not movement
+возбуждать\slash возбудить;;exciter;excite;not movement
+возглавлять\slash возглавить;;être à la tête;be at the head;not movement
+воздействовать;;influencer;influence;movement
+воздерживаться\slash воздержаться;;s'abstenir de;refrain (from);not movement
+возникать\slash возникнуть;;surgir;arise;movement
+возобновлять\slash возобновить;;recommencer;renew;not movement
+возрастать\slash возрасти;;croître;grow;movement
+вонять;;puer;stink (of);movement
+воображать\slash вообразить;;imaginer;imagine;not movement
+воспринимать\slash воспринять;;percevoir;perceive;not movement
+восприняться\slash восприниматься;;s’apercevoir;perceive;not movement
+воспроизводить\slash воспроизвести;;répéter, rejouer;reproduce, replay;not movement
+восстанавливать\slash восстановить;;rétablir;restore;not movement
+восхищаться\slash восхититься;;admirer;be delighted (with);not movement
+впадать\slash впасть;;tomber, sombrer;fall, lapse;movement
+врать\slash со-;;mentir;lie;not movement
+вращаться\slash вращать;;se tourner;turn, roll;not movement
+вредить\slash по-;;nuire à;injure;movement
+вручать\slash вручить;;remettre;hand over (to);not movement
+врываться\slash ворваться;;faire irruption;rush in;not movement
+вскакивать\slash вскочить;;sauter sur;jump (on, into);movement
+вскрывать\slash вскрыть;;ouvrir;open;not movement
+вспыхивать\slash вспыхнуть;;jaillir;blaze up;movement
+вставлять\slash вставить;;mettre;set in(to);not movement
+встраивать\slash встроить;;encastrer;build in;not movement
+встряхивать\slash встряхнуть;;secouer;shake (up);not movement
+вступать\slash вступить;;entrer;enter;movement
+выбираться\slash выбраться;;sortir, se tirer;get out;not movement
+вывозить\slash вывезти;;enlever, exporter;take out, export;not movement
+выгонять\slash выгнать;;chasser;turn out;not movement
+выделяться\slash выделиться;;se séparer;stand out (for);not movement
+выдерживать\slash выдержать;;soutenir;stand;not movement
+выживать\slash выжить;;survivre;survive;movement
+выкручивать\slash выкрутить;;tordre, dévisser;twist;not movement
+выкупать\slash выкупаться;;racheter, baigner;buy back, bathe;not movement
+вынашивать\slash выносить;;porter, endurer;carry, endure;not movement
+вынуждать\slash вынудить;;contraindre;force;not movement
+выполнять\slash выполнить;;remplir;carry out;not movement
+выражаться\slash выразиться;;s'exprimer;appear;not movement
+выращивать\slash вырастить;;élever;grow;not movement
+высасывать\slash высосать;;sucer;suck out;not movement
+выслушивать\slash выслушать;;écouter;listen (to);not movement
+выстраивать\slash выстроить;;bâtir;draw up;not movement
+вытаскивать\slash вытащить;;retirer;take out;not movement
+вытирать\slash вытереть;;essuyer;wipe;not movement
+вычислять\slash вычислить;;calculer;calculate;not movement
+вышивать\slash вышить;;broder;embroider;not movement
+выяснять\slash выяснить;;éclaircir;clear up;not movement
+вязать\slash с-;;lier, attacher, tricoter;bind, tie up, knit;not movement
+гарантировать;;garantir;guarantee;not movement
+гармонировать;;s'harmoniser;harmonize;movement
+генерировать;;produire;engineer;not movement
+гибнуть\slash по-;;périr;perish;movement
+глотать;;avaler;swallow;not movement
+гнаться\slash по-;;courir après;chase;not movement
+говорить\slash по-;;parler;talk (about);movement
+годиться;;convenir;be fit (for);not movement
+грабить\slash о-;;voler, piller;rob;not movement
+грозить\slash при-;;menacer, gronder;threaten, scold;not movement
+гудеть\slash про-;;bourdonner;buzz;movement
+датировать;;dater (de);date;not movement
+действовать\slash по-;;agir;act;movement
+делаться\slash с-;;devenir;become;not movement
+делиться\slash раз-;;se diviser;divide;not movement
+демонстрировать;;manifester;demonstrate;not movement
+добиваться\slash добиться;;(chercher à) obtenir;(try to) achieve;not movement
+добывать\slash добыть;;obtenir, extraire;obtain, mine;not movement
+доверять\slash доверить;;confier;entrust (to);not movement
+доводить\slash довести;;amener à;to take (to);not movement
+догадываться\slash догадаться;;deviner;guess;movement aspect unset
+дожидаться\slash дождаться;;attendre;wait (for, till);not movement
+доказывать\slash доказать;;prouver;prove;not movement
+доминировать;;prédominer;(pre)dominate;movement
+донашивать\slash доносить;;porter, dénoncer;carry, denounce;not movement
+дополнять\slash дополнить;;compléter;supplement (with);not movement
+допрашивать\slash допросить;;interroger;interrogate;not movement
+допускать\slash допустить;;admettre;admit (to);not movement
+доставаться\slash достаться;;recevoir;fall to one's share;not movement
+достигать\slash достигнуть;;atteindre;reach;not movement
+дразнить\slash по-;;taquiner;tease;not movement
+дрожать;;trembler;tremble;movement
+дуть\slash по-;;souffler;подуть;not movement
+душить\slash за-;;étouffer;smother;not movement
+жалеть\slash по-;;plaindre;pity;movement
+жалить\slash у-;;piquer;sting;not movement
+жертвовать\slash по-;;faire un don;make a donation;not movement
+жрать\slash со-;;dévorer;devour;not movement
+забивать\slash забить;;enfoncer;drive in;not movement
+забираться\slash забраться;;grimper, pénétrer;climb up, crawl;not movement
+заботиться\slash по-;;prendre soin de;take care (of);not movement
+заваривать\slash заварить;;infuser;boil, make trouble;not movement
+заведовать;;administrer;be in charge;movement
+завершать\slash завершить;;achever;finish;not movement
+завершаться\slash завершиться;;s'achever;be completed;not movement
+заверять\slash заверить;;assurer, certifier;assure, certify;not movement
+зависать\slash зависнуть;с кем;traîner (avec);hover, hang out;movement
+заводить\slash завести;;conduire, démarrer;lead, start/bring up;not movement
+завоевывать\slash завоевать;;conquérir;conquer;not movement
+заглядывать\slash заглянуть;;regarder;glance (at);movement
+загораживать\slash загородить;;enclore;enclose;not movement
+загружать\slash загрузить;;charger;load;not movement
+загрязнять\slash загрязнить;;salir;soil;not movement
+задерживать\slash задержать;;retenir;detain;not movement
+задерживаться\slash задержаться;;être retenu;stay too long;not movement
+задумывать\slash задумать;;se proposer de;conceive;not movement
+задумываться\slash задуматься;;rester pensif rêveur;think (about, of);not movement
+задыхаться\slash задохнуться;;étouffer;gasp (for breath);movement aspect unset
+заезжать\slash заехать;;passer chez;call in on the way (at);movement
+зажимать\slash зажать;;serrer;press;not movement
+закладывать\slash заложить;;mettre;put;not movement
+заключать\slash заключить;;emprisonner;conclude;not movement
+заключаться;;consister en;conclude (with, in);not movement
+закреплять\slash закрепить;;fixer;fasten;not movement
+залезать\slash залезть;;entrer;climb;movement
+заливать\slash залить;;inonder;flood;not movement
+залогиниться;;;;movement aspect unset
+занимать\slash занять;;emprunter;borrow;not movement
+запаздывать\slash запоздать;;être en retard;be late (for);movement
+запоминаться\slash запомниться;;rester dans la mémoire de;remember;not movement
+запускать\slash запустить;;jeter;fling;not movement
+заражать\slash заразить;;communiquer à;infect;not movement
+заслуживать\slash заслужить;;mériter;merit;not movement
+заставать\slash застать;;trouver;find;not movement
+заставлять\slash заставить;;encombrer;compel;not movement
+застревать\slash застрять;;rester;stick;movement
+застреливать\slash застрелить;;tuer;shoot;not movement
+застывать\slash застынуть;;застыть;cool down;movement
+зафиксировать;;fixer;fix;not movement
+захватывать\slash захватать;;prendre;grasp;not movement
+зачислять\slash зачислить;;nommer;enroll;not movement
+защищать\slash защитить;;défendre;defend (from, against);not movement
+заявлять\slash заявить;;déclarer;declare;not movement
+злить\slash обо-;;fâcher;vex;not movement
+злоупотреблять\slash злоупотребить;;abuser de;abuse;movement
+знакомить\slash по-;;présenter à;introduce (to);not movement
+игнорировать;;ignorer;ignore;not movement
+избавляться\slash избавиться;;se délivrer;get rid (of);not movement
+избегать\slash избежать;;éviter;avoid;not movement
+избивать\slash избить;;battre;beat unmercifully;not movement
+извещать\slash известить;;informer;inform;not movement
+извлекать\slash извлечь;;tirer;extract (from);not movement
+изготавливать\slash изготовить;;fabriquer;make;not movement
+издавать\slash издать;;éditer;publish;not movement
+излагать\slash изложить;;exposer;state;not movement
+изменять\slash изменить;;changer;change;movement
+изнашиваться\slash износиться;;être usé;wear out;not movement
+изображать\slash изобразить;;représenter;depict;not movement
+изобретать\slash изобрести;;inventer;invent;not movement
+изолировать;;isoler;isolate;not movement
+иллюстрировать\slash про-;;illustrer;illustrate;not movement
+импортировать;;importer;import;not movement
+интерпретировать;;interpréter;interpret;not movement
+информировать\slash про-;;informer;inform;not movement
+исполнять\slash исполнить;;faire;carry out;not movement
+исполняться\slash исполниться;;s'accomplir;be fulfilled;not movement
+использоваться;;servir;be used;not movement
+исследовать;;examiner;investigate;not movement
+истекать\slash истечь;;s'écouler;elapse;movement
+исходить\slash изойти;;parcourir;go / walk / stroll all over;movement
+исчезать\slash исчезнуть;;disparaître;disappear;movement
+исчерпывать\slash исчерпать;;épuiser;exhaust;not movement
+казаться\slash по-;;paraître;seem;not movement
+казнить;;exécuter;execute;not movement
+касаться\slash коснуться;;toucher;touch (with);movement aspect unset
+катать\slash кататься;;rouler;drive;not movement
+катить\slash по-;;rouler;bowl along;not movement
+катиться\slash по-;;rouler;rush;not movement
+качать\slash качнуть;;balancer;rock;not movement
+кидаться\slash кинуться;;se jeter;throw / fling oneself;not movement
+классифицировать;;classifier;classify;not movement
+колебаться\slash по-;;être ébranlé;oscillate;not movement
+командовать;;commander;command;not movement
+комментировать\slash про-;;commenter;comment (on, upon);not movement
+компенсировать;;compenser;compensate;not movement
+конвертировать;;convertir;convert;not movement
+конкурировать;;rivaliser (avec, pour);compete (with smb. in smth.);movement
+координировать;;coordonner;co(-)ordinate (with);not movement
+копировать\slash с-;;copier;copy;not movement
+копить\slash на-;;amasser;save up;not movement
+коррелировать;;corréler;correlate;movement
+красить\slash вы-;;peindre;colo(u)r;not movement
+краситься\slash вы-;;se farder;put on make up;not movement
+краснеть\slash по-;;rougir;edden;not movement
+красть\slash у-;;voler;steal;not movement
+критиковать;;critiquer;criticize;not movement
+крутить\slash по-;;tortiller;twist;not movement
+крутиться\slash по-;;tourner;turn;not movement
+кусать\slash по-;;mordre;bite;not movement
+кушать\slash по-;;manger;eat;not movement
+лгать\slash со-;;mentir;lie;movement
+лезть\slash по-;;grimper;climb (up, on to);movement
+лечиться\slash по-;;suivre un traitement;receive / undergo (medical) treatment (for);not movement
+ликвидировать;;liquider;liquidate;not movement
+листать;;feuilleter;turn over the pages (of);not movement
+литься\slash лить;;couler;flow;not movement
+ловить\slash поймать;;saisir;(try to) catch;not movement
+локализовать;;localiser;localize;not movement
+мазать\slash из-;;graisser;намазать;not movement
+манипулировать;;manipuler;manipulate;not movement
+меняться\slash по-;;changer;change;not movement
+мигать\slash мигнуть;;cligner;blink;movement
+мириться\slash по-;;se réconcilier;make it up (with smb.);not movement
+модернизировать;;moderniser;modernize;not movement
+молиться\slash по-;;prier;pray (to smb., for smth.);not movement
+молоть\slash с-;;moudre;grind;not movement
+монтировать\slash с-;;monter;assemble;not movement
+моросить;;bruiner;drizzle;movement
+мочиться\slash по-;;uriner;urinate;not movement
+мстить\slash ото-;;venger;take revenge (on smb. for smth.);movement
+мучить\slash за-;;tourmenter;torment;not movement
+мучиться\slash по-;;se tourmenter au sujet de;agonize;not movement
+мыслить;;raisonner;think (of, about);not movement
+набирать\slash набрать;;ramasser;gather;not movement
+наблюдать;;observer;watch;not movement
+наблюдаться\slash наблюдать;;se voir;be observed;not movement
+навещать\slash навестить;;visiter;visit;not movement
+нагружать\slash нагрузить;;charger;load (with);not movement
+наедаться\slash наесться;;se lester;eat one's fill;not movement
+наказывать\slash наказать;;punir;punish;not movement
+накладывать\slash наложить;;mettre sur;lay (on);not movement
+накрывать\slash накрыть;;couvrir de;cover (with);not movement
+намереваться\slash намериться;;avoir l'intention de;intend;movement aspect unset
+намечать\slash наметить;;marquer;design;not movement
+нанимать\slash нанять;;louer;hire;not movement
+наносить\slash нанести;;apporter une quantité de;drift (on);not movement
+нападать\slash напасть;;напасть I;attack;movement
+напиваться\slash напиться;;étancher sa soif;drink;not movement
+наполнять\slash наполнить;;remplir;fill;not movement
+направлять\slash направить;;diriger;direct (at, to);not movement
+направляться\slash направиться;;se diriger;make;not movement
+напрягаться\slash напрячься;;faire des efforts;strain / exert oneself;not movement
+нарастать\slash нарасти;;croître;grow (on);movement
+нарезать\slash -;;couper;cut (into pieces);not movement
+наряжать\slash нарядить;;habiller;dress (up, out);not movement
+насиловать\slash из-;;violer;violate;not movement
+наслаждаться\slash насладиться;;jouir de;enjoy;not movement
+наследовать;;hériter de;inherit;not movement
+настаивать\slash настоять;;insister sur;insist;movement
+настраивать\slash настроить;;accorder;tune (up, in);not movement
+натягивать\slash натянуть;;tendre;stretch;not movement
+находиться\slash найтись;;se retrouver;be found;not movement
+недооценивать\slash недооценить;;Sous-estimer;underestimate;not movement
+нервировать;;énerver;make smb. nervous;not movement
+нервничать;;être nerveux;be / feel nervous;movement
+нуждаться;;avoir besoin (de, de);be in need / want (of);not movement
+нырять\slash нырнуть;;plonger;dive;movement
+обвинять\slash обвинить;;accuser (de);accuse (of);not movement
+обдумывать\slash обдумать;;bien méditer;consider;not movement
+обеспечивать\slash обеспечить;;pourvoir;provide (for, with);not movement
+обижать\slash обидеть;;vexer;offend (smb.);not movement
+обладать;;posséder;possess;movement
+обмениваться\slash обменяться;;échanger;take smth. by mistake;not movement
+обнимать\slash обнять;;serrer dans ses bras;embrace;not movement
+обновлять\slash обновить;;renouveler;renew;not movement
+обожать;;adorer;adore;not movement
+обозначать\slash обозначить;;marquer;denote;not movement
+оборачиваться\slash обернуться;;se retourner;turn (round);not movement
+обосновывать\slash обосновать;;argumenter;(give) prove;not movement
+обосраться;;;;movement aspect unset
+образовывать\slash образовать;;organiser;form;not movement
+образовываться\slash образоваться;;se former;form;not movement
+обслуживать\slash обслужить;;desservir;serve;not movement
+обучать\slash обучить;;apprendre à;teach (smb. smth.);not movement
+обходиться\slash обойтись;;traiter;cost;not movement
+объединять\slash объединить;;unifier;unite;not movement
+объединяться\slash объединиться;;s'unir;join hands (with);not movement
+объясняться\slash объясниться;;s'expliquer;explain oneself;not movement
+ограничивать\slash ограничить;;restreindre;confine;not movement
+одобрять\slash одобрить;;approuver;approve (of);not movement
+ознакомляться\slash ознакомиться;;se mettre au courant de;familiarize oneself (with);not movement
+оказывать\slash оказать;;montrer;show;not movement
+оказываться\slash оказаться;;se trouver;turn out (to be);not movement
+оканчивать\slash окончить;;finir;finish;not movement
+оккупировать;;occuper;occupy;not movement
+окружать\slash окружить;;entourer;surround;not movement
+опережать\slash опередить;;devancer;pass ahead (of);not movement
+оперировать;;opérer;operate (on);not movement
+оповещать\slash оповестить;;informer;notify;not movement
+опознавать\slash опознать;;identifier;identify;not movement
+оправдывать\slash оправдать;;justifier;justify;not movement
+опрашивать\slash опросить;;interroger;interrogate;not movement
+определять\slash определить;;définir;determine;not movement
+опрокидывать\slash опрокинуть;;renverser;overturn;not movement
+опубликовывать\slash опубликовать;;publier;publish;not movement
+опускать\slash опустить;;baisser;lower;not movement
+опускаться\slash опуститься;;tomber;sink;not movement
+орать;;crier;yell;not movement
+организовывать\slash организовать;;organiser;organize;not movement
+осваивать\slash освоить;;assimiler;master;not movement
+освещать\slash осветить;;éclairer;light (up);not movement
+освобождать\slash освободить;;libérer;set free;not movement
+освобождаться\slash освободиться;;se libérer;become free;not movement
+оскорблять\slash оскорбить;;offenser;offend;not movement
+ослаблять\slash ослабить;;affaiblir;weaken;not movement
+осматривать\slash осмотреть;;visiter;view;not movement
+основывать\slash основать;;fonder;found;not movement
+осуждать\slash осудить;;désapprouver;condemn;not movement
+осуществлять\slash осуществить;;réaliser;realize;not movement
+осуществляться\slash осуществиться;;se réaliser;be carried out;not movement
+отбирать\slash отобрать;;enlever;take away / off / from;not movement
+отвлекать\slash отвлечь;;détourner;divert;not movement
+отделять\slash отделить;;séparer;separate;not movement
+отделяться\slash отделиться;;se séparer;separate;not movement
+отзываться\slash отозваться;;répondre à;respond (to);not movement
+откладывать\slash отложить;;mettre de côté;lay / put / set aside;not movement
+относиться\slash отнестись;;traiter;treat;not movement
+отправляться\slash отправиться;;aller (à);go (to a place);not movement
+отпускать\slash отпустить;;permettre à de s'en aller;let go;not movement
+отражать\slash отразить;;réfléchir;repel;not movement
+отражаться\slash отразиться;;se refléter;be reflected;not movement
+отрезать\slash -;;couper;cut off;not movement
+отрицать;;nier;deny;not movement
+отслеживать\slash отследить;;suivre;backtrace;not movement
+охватывать\slash охватить;;embrasser;seize;not movement
+охотиться;;chasser;hunt;not movement
+охрипнуть;;être enroué;become hoarse;movement
+оценивать\slash оценить;;évaluer;fix the price (of);not movement
+оцениваться\slash оцениться;;évaluer;fix the price (of);not movement
+ощущать\slash ощутить;;éprouver;feel;not movement
+парализовать;;paralyser;paralyze;not movement
+перебивать\slash перебить;;tuer;re-upholster;not movement
+перевозить\slash перевезти;;transporter;transport;not movement
+переворачивать\slash перевернуть;;tourner;turn over;not movement
+передвигаться\slash передвинуться;;se déplacer;move;not movement
+переделывать\slash переделать;;refaire;make over;not movement
+передумывать\slash передумать;;changer d'avis;change one's mind;not movement
+переживать\slash пережить;;éprouver;experience;not movement
+перемещать\slash переместить;;déplacer;move;not movement
+пересекать\slash пересечь;;passer à travers;cut;not movement
+перечислять\slash перечислить;;énumérer;enumerate;not movement
+печатать\slash на-;;imprimer;print;not movement
+писаться\slash на-;;s'érire;spell;not movement
+планироваться\slash спланировать;;arrêter;plan;not movement
+повторяться\slash повториться;;se répéter;repeat (oneself);not movement
+погибать\slash погибнуть;;périr;perish;movement
+поглощать\slash поглотить;;engloutir;swallow up;not movement
+погружать\slash погрузить;;charger;immerse (into);not movement
+подбирать\slash подобрать;;relever;pick up;not movement
+подбодрить\slash подбадривать;;encourager;invigorate;not movement
+подвергать\slash подвергнуть;;faire subir à;subject (to);not movement
+подвергаться\slash подвергнуться;;subir;undergo;not movement
+подводить\slash подвести;;amener;lead (to);not movement
+подворачивать\slash подвернуть;;visser;screw a little;not movement
+поддерживать\slash поддержать;;retenir;support;not movement
+подключать\slash подключить;;brancher;link up;not movement
+подлежать;;être sujet à;be subject (to);movement
+подметать\slash подмести;;balayer;sweep;not movement
+подозревать\slash заподозрить;;soupçonner (de);suspect (of);not movement
+подписываться\slash подписаться;;signer;sign;not movement
+подражать;;imiter;imitate;movement
+подтверждать\slash подтвердить;;affirmer;confirm;not movement
+позволять\slash позволить;;permettre;allow (to);not movement
+показываться\slash показаться;;se montrer;appear;not movement
+покидать\slash покинуть;;abandonner;leave;not movement
+покончить;;achever;finish (with);not movement
+ползти\slash по-;;ramper;crawl / creep along;movement
+поливать\slash полить;;arroser;pour (on, upon);not movement
+пользоваться\slash вос-;;profiter de;avail oneself (of);not movement
+помечать\slash пометить;;marquer;mark;not movement
+помещать\slash поместить;;mettre;place;not movement
+понадобиться;;avoir besoin de;need;not movement
+попадать\slash попасть;;se trouver;hit;movement
+пороть\slash рас-;;fesser;undo;not movement
+поручать\slash поручить;;charger;charge (with);not movement
+посещать\slash посетить;;visiter;visit;not movement
+поставлять\slash поставить;;поставить II;deliver (for);not movement
+потреблять\slash потребить;;consommer;consume;not movement
+появляться\slash появиться;;sembler;appear;not movement
+пояснять\slash пояснить;;expliquer;explain;not movement
+превосходить\slash превзойти;;surpasser;excel (in);not movement
+превращать\slash превратить;;transformer;change (into);not movement
+превращаться\slash превратиться;;se transformer;turn (into);not movement
+превышать\slash превысить;;surpasser en;exceed;not movement
+предавать\slash предать;;livrer à;betray;not movement
+предвидеть;;prévoir;foresee;not movement
+предлагать\slash предлагаться;;offrir;offer;not movement
+предотвращать\slash предотвратить;;prévenir;avert;not movement
+предохранять\slash предохраняться;;protéger (contre, contre);guard (from, against);not movement
+предполагать\slash предположить;;supposer;suppose;not movement
+предполагаться\slash предположить;;;be intended;not movement
+предпочитать\slash предпочесть;;préférer;prefer;not movement
+предпринимать\slash предпринять;;entreprendre;undertake;not movement
+предстоять;;;lie ahead;movement
+предусматривать\slash предусмотреть;;prévoir;foresee;not movement
+предчувствовать;;pressentir;have a presentiment/ foreboding (of / about);not movement
+преобразовывать\slash преобразовать;;réformer;reform;not movement
+преодолевать\slash преодолеть;;surmonter;overcome;not movement
+преследовать;;poursuivre;pursue;not movement
+претендовать;;prétendre à;(lay) claim (to);movement
+преувеличивать\slash преувеличить;;exagérer;exaggerate;not movement
+преуспевать\slash преуспеть;;réussir dans;succeed (in);movement
+прибавлять\slash прибавить;;ajouter;add;not movement
+привлекать\slash привлечь;;attirer;draw;not movement
+привязывать\slash привязать;;attacher;tie (to);not movement
+приговаривать\slash приговорить;;condamner (à);repeat;not movement
+придерживаться\slash придержаться;;se tenir à;hold (to);not movement
+прижимать\slash прижать;;serrer contre;press (to / on);not movement
+прижиматься\slash прижаться;;se serrer;press oneself (to);not movement
+признавать\slash признать;;reconnaître;recognize;not movement
+признаваться\slash признаться;;avouer;confess (to);not movement
+приказывать\slash приказать;;ordonner;order (to);not movement
+прилагать\slash приложить;;joindre;apply (to);not movement
+принуждать\slash принудить;;contraindre;force;not movement
+приобретать\slash приобрести;;acquérir;acquire;not movement
+приоткрывать\slash приоткрыть;;entrouvrir;to open slighly;not movement
+приподнимать\slash приподнять;;soulever;lift / raise (a little);not movement
+присваивать\slash присвоить;;s'approprier;appropriate;not movement
+прислушиваться\slash прислушаться;;écouter;listen (to);movement aspect unset
+присоединяться\slash присоединиться;;se joindre à;join;not movement
+приспосабливать\slash приспособить;;adapter;fit to;not movement
+приступать\slash приступить;;se mettre à;set about;movement
+притворяться\slash притвориться;;fermer (à demi);feign;not movement
+приходиться\slash прийтись;;convenir;suit;movement
+причинять\slash причинить;;causer;cause;not movement
+пробегать\slash пробежать;;parcourir;run about (for a certain time);movement
+проводиться\slash провестись;;conduire;lead;not movement
+провоцировать\slash с-;;provoquer;provoke (to);not movement
+прогнозировать;;faire des pronostics;forecast;not movement
+проговаривать\slash проговорить;;prononcer;say;not movement
+прогонять\slash прогнать;;pousser;drive;not movement
+продаваться\slash продаться;;se vendre;be on / for sale;not movement
+продвигаться\slash продвинуться;;progresser;move forward / ahead;not movement
+проделывать\slash проделать;;pratiquer;break through;not movement
+продемонстрировать\slash продемнстрировать;;mettre en évidence;show;not movement
+продумывать\slash продумать;;examiner;think over;not movement
+производиться\slash произвестися;;faire;make;not movement
+пролетать\slash пролететь;;survoler;fly (past, by);movement
+пропускать\slash пропустить;;laisser passer;let pass / in / through;movement
+прославляться\slash прославиться;;se rendre célèbre (par);become famous (for);not movement
+протестовать\slash за-;;protester;protest (against / at);movement
+противиться\slash вос-;;s'opposer à;oppose (to);not movement
+протягивать\slash протянуть;;tendre;stretch;not movement
+проявлять\slash проявить;;manifester;show;not movement
+прятаться\slash с-;;se cacher;hide;not movement
+публиковать\slash о-;;publier annoncer;publish;not movement
+пугать\slash пугаться;;faire peur (à);frighten;not movement
+пускать\slash пустить;;laisser;let (go);not movement
+путать;;embrouiller;mix things up;not movement
+пылиться\slash напылить;;se couvrir de poussière;be(come) / get dusty;not movement
+пытаться\slash по-;;tenter;try;not movement
+радовать\slash об-;;réjouir;gladden;not movement
+радоваться\slash об-;;se réjouir;rejoice;not movement
+разбирать\slash разобрать;;prendre;strip;not movement
+разбираться\slash разобраться;;ranger des affaires;come apart;not movement
+развивать\slash развить;;développer;develop;not movement
+развиваться\slash развиться;;se développer;develop;not movement
+развлекать\slash развлечь;;distraire;entertain;not movement
+разворачиваться\slash развернуться;;se déployer;turn (around);not movement
+разглашать\slash разгласить;;divulguer;divulge;not movement
+разделять\slash разделить;;diviser;divide;not movement
+разделяться\slash разделиться;;se diviser (en);divide;not movement
+раздражать\slash раздражить;;irriter;irritate;not movement
+разливаться\slash разлиться;;se répandre;flood;not movement
+размещать\slash разместить;;placer;place;not movement
+размышлять\slash размыслить;;réfléchir (sur);reflect (on, upon);movement
+разочаровывать\slash разочаровать;;décevoir;disappoint (over, in);not movement
+разрабатывать\slash разработать;;cultiver;cultivate;not movement
+разрушать\slash разрушить;;détruire;destroy;not movement
+разрывать\slash разорвать;;déchirer;tear;not movement
+разъединять\slash разъединить;;séparer;separate;not movement
+разыгрывать\slash разыграть;;jouer;play;not movement
+разыскивать\slash разыскать;;chercher;look (for);not movement
+ранить\slash по-;;blesser;wound;not movement
+раскаиваться\slash раскаяться;;se repentir (de);repent (smth., of smth.);movement aspect unset
+раскачиваться\slash раскачаться;;se balancer;swing (back and forth);not movement
+раскрывать\slash раскрыть;;ouvrir;open;not movement
+распознавать\slash распознать;;discerner;recognize;not movement
+располагаться\slash расположиться;;s'installer;settle (oneself);not movement
+распределять\slash распределить;;distribuer;distribute (to, among);not movement
+распространять\slash распространить;;diffuser;spread;not movement
+распространяться\slash распространиться;;se répandre;spread;not movement
+расследовать;;examiner;investigate;not movement
+рассматривать\slash рассмотреть;;envisager;examine;not movement
+расспрашивать\slash расспросить;;questionner sur;inquire;not movement
+расставаться\slash расстаться;;se séparer (de);part (with);movement aspect unset
+расстраивать\slash расстроить;;déranger;disorder;not movement
+расстреливать\slash расстрелять;;fusiller;shoot;not movement
+рассуждать;;raisonner;argue;movement
+рассчитывать\slash рассчитать;;calculer;calculate;movement
+рассчитываться\slash рассчитаться;;régler ses comptes avec;settle accounts (with);not movement
+рассыпаться\slash -;;se répandre;crumble;not movement
+растворять\slash растворить;;ouvrir;dissolve;not movement
+растеряться;;se perdre;be / get lost;not movement
+расходовать\slash из-;;dépenser;spend;not movement
+расчесывать\slash расчесать;;démêler;comb (one's hair);not movement
+расширять\slash расширить;;élargir;widen;not movement
+рвать\slash рваться;;arracher;tear (to / in pieces);not movement
+рваться\slash рвать;;se déchirer;break;not movement
+реагировать\slash от-;;réagir;react (to, upon);movement
+реализовывать\slash реализовать;;réaliser;incarnate;not movement
+реализовываться\slash реализовать;;réaliser;realize;not movement
+регистрировать\slash за-;;enregistrer;register;not movement
+регулировать;;régler;regulate;not movement
+редактировать\slash от-;;revoir;edit;not movement
+резюмировать;;résumer;summarize;not movement
+рекомендовать\slash по-;;recommander;recommend;not movement
+реформировать;;réformer;reform;not movement
+решаться\slash решиться;;être décidé;make up one's mind (to);not movement
+ржаветь\slash за-;;se rouiller;become rusty;movement
+рисковать\slash рискнуть;;risquer;run risks;movement
+ронять\slash уронить;;laisser tomber;drop;not movement
+рубить\slash на-;;abattre;chop;not movement
+руководить;;diriger;lead;not movement
+рулить;;manœuvrer le gouvernail;drive;movement
+рыдать;;sangloter;sob;movement
+сажать\slash посадить;;planter;seat;not movement
+сбегать\slash сбежать;;courir;run (for);movement
+сбивать\slash сбить;;abattre;bring / knock down;not movement
+сверкать\slash сверкнуть;;étinceler;sparkle;movement
+свистеть\slash свистнуть;;siffler;whistle;not movement
+сворачивать\slash своротить;;rouler;displace;movement
+связывать\slash связать;;связать 1;tie together;not movement
+сгорать\slash сгореть;;être brûlé;burn down / out;movement
+сдавать\slash сдать;;remettre;deliver;not movement
+сдерживать\slash сдержать;;retenir;hold in;not movement
+сжигать\slash сжечь;;brûler;burn (down / out);not movement
+сжимать\slash сжать;;сжать I;(com)press;not movement
+сигнализировать;;donner des signaux;signal;not movement
+скользить\slash скользнуть;;glisser;slide;movement
+следить\slash про-;;suivre;watch;movement
+слушаться\slash по-;;obéir à;obey;not movement
+смущать\slash смутить;;troubler;embarrass;not movement
+снижать\slash снизить;;abaisser;lower;not movement
+снижаться\slash снизиться;;baisser;descend;not movement
+сниться\slash при-;;rêver;dream;not movement
+сносить\slash снести;;user;fetch down;not movement
+собираться\slash собраться;;se rassembler;gather;not movement
+совершать\slash совершить;;accomplir;accomplish;not movement
+совершаться\slash совершиться;;s'accomplir;happen;not movement
+совмещать\slash совместить;;faire coïncider;combine (with);not movement
+совокупляться\slash совокупиться;;s'accoupler;copulate;not movement
+совпадать\slash совпасть;;coïncider;coincide (with);movement
+содействовать\slash по-;;aider à;assist;movement
+содержать;;entretenir;contain;not movement
+содержаться\slash содержать;;être;contain;not movement
+сожалеть;;regretter;pity (smb.);movement
+создаваться\slash создаться;;se former;be created;not movement
+сообщаться\slash сообщиться;;se communiquer;communicate;not movement
+соответствовать;;correspondre à;correspond (to / with);movement
+сопровождать\slash сопроводить;;accompagner;accompany;not movement
+сопротивляться;;résister;resist;not movement
+сортировать\slash рас-;;trier;(as)sort;not movement
+сосать;;sucer;suck;not movement
+сосредоточиваться\slash сосредоточиться;;se concentrer;concentrate (on / upon);not movement
+состоять;;être;consist (in);movement
+сотрудничать;;collaborer;collaborate (with);movement
+сохраняться\slash сохраниться;;se conserver;remain;not movement
+сочетаться;;s'unir;combine;not movement
+сочинять\slash сочинить;;écrire;compose;not movement
+специализироваться;;se spécialiser;specialize (in);not movement
+списывать\slash списать;;copier;copy (from);not movement
+спорить\slash по-;;discuter;dispute;not movement
+справляться\slash справиться;;venir à bout de;inquire (after, about);not movement
+ссориться\slash по-;;se quereller;quarrel;not movement
+стареть\slash по-;;vieillir;grow old;movement
+стартовать;;prendre le départ;start;movement
+стелить;;étendre;to spread;not movement
+стесняться\slash по-;;se gêner;feel / be shy / self-conscious / embarrassed;not movement
+стимулировать;;stimuler;stimulate;not movement
+стонать\slash про-;;gémir;groan;movement
+страдать\slash по-;;souffrir;suffer (for a little);movement
+стрелять\slash выстрелить;;faire feu;shoot (at);movement
+стремиться\slash стремить;;aspirer à;speed;not movement
+судить;;juger;try;not movement
+суммировать;;faire le total;sum up;not movement
+существовать;;exister;exist;movement
+считать\slash счесть;;compter;count;movement
+съезжать\slash съехать;;descendre;go / come / drive down;movement
+сыпать;;verser;strew;movement
+таять\slash рас-;;fondre;melt;movement
+тереть\slash по-;;frotter;rub;not movement
+тестировать;;tester;test;not movement
+тонуть\slash у-;;se noyer;sink;movement
+топить\slash ис-;;chauffer;stoke;not movement
+тосковать;;languir;be sad / melancholy;movement
+транслировать;;retransmettre;transmit;not movement
+требовать\slash по-;;exiger;demand (of, from);not movement
+трясти\slash тряхнуть;;secouer;shake;not movement
+трястись\slash тряхнуть;;trembler (de, grelotter);shake;not movement
+тушить\slash по-;;éteindre;put out;not movement
+тянуться\slash по-;;s’étirer;to reach;not movement
+убеждать\slash убедить;;convaincre de;convince (of);not movement
+убеждаться\slash убедиться;;se convaincre de;make sure / certain (of, that);not movement
+увлекать\slash увлечь;;entraîner;carry along;not movement
+увольняться\slash уволиться;;démissionner;leave the service;not movement
+угрожать;;menacer de;threaten (with);not movement
+удаваться\slash удаться;;réussir;turn out well;not movement
+удалять\slash удалить;;éloigner;move off / away;not movement
+удаляться\slash удалиться;;s'éloigner;move off / away (from);not movement
+удваивать\slash удвоить;;doubler;double;not movement
+удерживать\slash удержать;;retenir;retain;not movement
+удерживаться\slash удержаться;;se retenir;hold one's ground;not movement
+удовлетворять\slash удовлетворить;;satisfaire;satisfy;not movement
+удостоверять\slash удостоверить;;certifier;certify;not movement
+укладывать\slash уложить;;mettre;lay;not movement
+укорачивать\slash укоротить;;raccourcir;shorten;not movement
+укреплять\slash укрепить;;affermir;strengthen;not movement
+укрывать\slash укрыть;;couvrir;cover;not movement
+умолять\slash умолить;;implorer;entreat;not movement
+уничтожать\slash уничтожить;;détruire;destroy;not movement
+упрощать\slash упростить;;simplifier;simplify;not movement
+усаживаться\slash усесться;;s'asseoir;take a sit;not movement
+усваивать\slash усвоить;;s'assimiler;master;not movement
+ускорять\slash ускорить;;accélérer;hasten;not movement
+устраиваться\slash устроиться;;s'installer;settle down;not movement
+устранять\slash устранить;;écarter;remove;not movement
+уступать\slash уступить;;céder;let (smb.) have (smth.);not movement
+усыпать;;couvrir;bestrew;not movement
+утешать\slash утешить;;consoler;comfort;not movement
+уточнять\slash уточнить;;préciser;specify;not movement
+учитывать\slash учесть;;tenir compte de;take into account / consideration;not movement
+финансировать;;financer;finance;not movement
+флиртовать;;flirter;flirt (with);movement
+фокусировать\slash с-;;focaliser;focus;not movement
+формировать\slash с-;;former;form;not movement
+формироваться\slash с-;;se former;shape;not movement
+формулировать\slash с-;;formuler;formulate;not movement
+функционировать;;fonctionner;function;movement
+хвастаться\slash по-;;se vanter;boast (of);not movement
+хлопать\slash по-;;claquer;flap;not movement
+хоронить\slash с-;;enterrer;bury;not movement
+хохотать\slash за-;;rire (aux éclats);laugh (loud / boisterously);movement
+храпеть;;ronfler;snore;movement
+худеть\slash по-;;maigrir;grow thin;movement
+цвести;;fleurir;flower;movement
+ценить\slash о-;;évaluer;value;not movement
+циркулировать;;circuler;circulate;movement
+цитировать\slash про-;;citer;quote;not movement
+чертить\slash на-;;tracer;draw;not movement
+чесать\slash по-;;peigner;comb;not movement
+чувствоваться\slash перечувствовать;;ressentir;be felt;not movement
+шептать\slash про-;;chuchoter;whisper;not movement
+шокировать;;choquer;horrify;not movement
+щелкать\slash щелкнуть;;faire claquer;click;not movement
+экспортировать;;exporter;export;not movement

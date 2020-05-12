@@ -19,11 +19,19 @@ all:  $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf}
 getcsv:
 	curl -s "https://api.github.com/repos/StorkST/CoreRussianVerbs/commits?path=RussianVerbsClassification.csv" | jq -r '.[0].commit.committer.date'
 
-build:
+buildBeginner:
+	python3.8 extract-RussianVerbsClassification.py -l A1 A2 B1 -o abc -y Движение > cefr/beginner-ru-fr-abcOrder.csv
+	xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-abcOrder.csv} \input{tex/a4-4columns.tex}"
 
-	xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-A1A2B1-abcOrder.csv} \input{tex/a4-4columns.tex}"
-	xelatex -jobname=intermediate-ru-fr-abcOrder "\def\csvfilename{cefr/intermediate-ru-fr-B2-abcOrder.csv} \input{tex/a4-4columns.tex}"
-	xelatex -jobname=advanced-ru-fr-abcOrder "\def\csvfilename{cefr/advanced-ru-fr-C1C2-abcOrder.csv} \input{tex/a4-3columns.tex}"
+buildIntermediate:
+	python3.8 extract-RussianVerbsClassification.py -l B2 -o abc -y Движение > cefr/intermediate-ru-fr-abcOrder.csv
+	xelatex -jobname=intermediate-ru-fr-abcOrder "\def\csvfilename{cefr/intermediate-ru-fr-abcOrder.csv} \input{tex/a4-4columns.tex}"
+
+buildAdvanced:
+	python3.8 extract-RussianVerbsClassification.py -l C1 C2 -o abc -y Движение > cefr/advanced-ru-fr-abcOrder.csv
+	xelatex -jobname=advanced-ru-fr-abcOrder "\def\csvfilename{cefr/advanced-ru-fr-abcOrder.csv} \input{tex/a4-3columns.tex}"
+
+buildTex:
 
 clean:
 	$(RM)  *.log *.aux \
