@@ -1,0 +1,57 @@
+\documentclass[version=last,fontsize=7pt]{scrartcl}
+\usepackage[
+    a4paper,
+    total={200mm,281mm},
+    left=5mm,
+    right=5mm,
+    top=8mm,
+    bottom=8mm
+  ]{geometry}
+\usepackage[english,french,russian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{fontspec}
+\usepackage{csvsimple}
+\usepackage{adjmulticol}
+\setmainfont{XCharter}
+\usepackage[table]{xcolor}
+\pagestyle{empty}
+
+\newsavebox\ltmcbox
+
+\setlength{\columnsep}{0mm} % adjust spacing between columns
+\setlength{\columnseprule}{0.1pt} % width of drawn line between columns
+\setlength\tabcolsep{0.5mm} % spacing in table: between Russian verbs and translation
+
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+  \begin{adjmulticols}{4}{}{}
+  \setbox\ltmcbox\vbox{
+  \makeatletter\col@number\@ne
+
+  \csvstyle{myStyle}{
+    longtable=p{30mm}>{\small}p{17mm}, % each column = 40mm. 5 columns = 200mm
+    separator=semicolon
+  }
+    %late after head=\\\hline\rowcolor{yellow!50},
+    %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}
+    %head to column names,
+    %table head=\hline & Verbe & Traduction\\\hline\hline,
+    %late after line=\\\hline}
+  \csvreader[myStyle]{\csvfilename}
+    {verb=\verb,transFr=\transFr}
+    {\verb & \transFr} % specify your columns here
+  \unskip
+  \unpenalty
+  \unpenalty
+  }
+  \unvbox\ltmcbox
+
+  \begin{addmargin}[1mm]{0mm}
+    \input{./footer-fr.tex}
+  \end{addmargin}
+
+  \end{adjmulticols}
+\end{document}
