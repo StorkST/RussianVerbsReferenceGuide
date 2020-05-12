@@ -1,47 +1,37 @@
 import argparse
 import csv
 
-#levels = ["A1", "A2", "B1"]
-#levels = ["B2"]
-#levels = ["C1","C2"]
-#lengthVerb = 23
-#lengthTrans = 16
-
 colSep = ';'
 transSepBig = ';'
-transSepDst = ','
+transSepSmall = ','
 
-def genCsv(levels, columnsName, yellowCol):
+def genCsv(levels, yellowCol, order):
     with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
-        i = 0
-        bigPairs = 0
-        bigPairsA = []
-        bigTransFR = 0
-        bigTransFRA = []
-        bigTransEN = 0
-        bigTransENA = []
 
         allVerbsOrder = []
         allVerbs = {}
 
         for row in reader:
-                i += 1
                 verbRank = row['Ранг ГЛ']
                 lvl = row['Уровень']
                 infinitive = row['Инфинитив']
                 pair = row['Пара аспектов']
+                usage = row['Подробности'].split('-')[0]
                 transFR = row['По-французски'].split(transSepBig)[0]
                 transEN = row['По-английски'].split(transSepBig)[0]
-                verbData = ""
+                yellow = None
+                if yellowCol != None:
+                    yellow = row[yellowCol]
 
                 if lvl in levels:
                     if verbRank != "10000":
-                        #Verb
                         verb = infinitive
+                        # Fetch pair if available
                         if pair != "":
                             verb = pair
-                            # Simplify perf/imperf if possible
+                            # Try to simplify pair perf/imperf if possible
+                            # by keeping only the prefix
                             pairA = pair.split('/')
                             imperf = pairA[0]
                             perf = pairA[1]
@@ -50,40 +40,47 @@ def genCsv(levels, columnsName, yellowCol):
                                 verb = imperf + '/' + perf[0:lenPrefix] + '-'
                             verb = verb.replace("/", "\slash ")
 
-                        #Translation
-                        if ',' in transFR:
-                            trans = transFR[0:lengthTrans+1]
-                            #trans = trans.replace(', ', transSepDst)
-                        else:
-                            trans = transFR[0:lengthTrans]
-
                         if verb not in allVerbsOrder:
                             allVerbsOrder.append(verb)
-                        allVerbs[verb] = trans
+                        allVerbs[verb] = {
+                                "usage": usage,
+                                "transFr": transFR,
+                                "transEn": transEN,
+                                "yellow": yellow
+                        }
 
-        allVerbsKeys = allVerbs.keys()
-        newVerbsKeys = sorted(allVerbsKeys)
+        newVerbsKeys = []
+        if order == 'abc':
+            allVerbsKeys = allVerbs.keys()
+            newVerbsKeys = sorted(allVerbsKeys)
+        else: # by frequency
+            newVerbsKeys = allVerbsOrder
 
-        print("verb" + colSep + "transFR")
         for verb in newVerbsKeys:
-            print(verb + colSep + allVerbs[verb])
+            p = allVerbs[verb]
+            line = verb + colSep + p["usage"] + colSep + p["transFr"] + colSep + p["transEn"]
+            if yellowCol != None:
+                line = line + colSep + p["yellow"]
+            print(line)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fiters and Extractions on RussianVerbsClassification.csv')
     parser.add_argument('-l', '--cefr-levels', dest='levels', required=True, nargs='+', help='')
-    parser.add_argument('-y', '--yellow', dest='yellow', default=None, help='field to put in a new yellow column')
+    parser.add_argument('-y', '--yellow', dest='yellow', nargs = '?', default=None, help='field to put in a new yellow column')
+    parser.add_argument('-o', '--order', dest='order', nargs='?', choices=['freq', 'abc'], default='freq', help='order to classify data, either by frequency order or by alphabetical order')
     args = parser.parse_args()
 
     levels = args.levels
     yellowCol = args.yellow
+    order = args.order
 
     columnsName = ""
-    columnsNameA = ["verbs", "transEn", "transFr"]
+    columnsNameA = ["verbs", "usage", "transFr", "transEn"]
     if yellowCol != None:
-        columnsNameA.append(yellowCol)
+        columnsNameA.append("yellow")
     for col in columnsNameA:
         columnsName = columnsName + col + colSep
-    columnsName = columnsName[:-length(colSep)]
+    columnsName = columnsName[:-len(colSep)]
 
-
-    genCsv(levels, columnsName, yellow != yellowCol)
+    print(columnsName)
+    genCsv(levels, yellowCol, order)
