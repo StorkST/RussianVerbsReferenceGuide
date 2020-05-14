@@ -28,7 +28,7 @@ extract_csv = \
 	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
 
 TEX = \
-	xelatex -jobname=$(1) \
+	xelatex -output-directory $(output_dir) -output-jobname=$(1) \
 	"\def\numcolumns{$(2)} \
 	\def\widthleftcol{$(3)} \
 	\def\widthrightcol{$(4)} \
