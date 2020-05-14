@@ -33,7 +33,7 @@ TEX = \
 	\def\widthleftcol{$(3)} \
 	\def\widthrightcol{$(4)} \
 	\def\baselinevar{$(5)} \
-	\def\transfield{$(6)}
+	\def\transfield{$(6)} \
 	\def\withyellow{$(7)} \
 	\def\csvfilename{$(8)} \
 	\def\footerfile{$(9)} \
