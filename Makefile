@@ -33,9 +33,10 @@ TEX = \
 	\def\widthleftcol{$(3)} \
 	\def\widthrightcol{$(4)} \
 	\def\baselinevar{$(5)} \
-	\def\withyellow{$(6)} \
-	\def\csvfilename{$(7)} \
-	\def\footerfile{$(8)} \
+	\def\transfield{$(6)}
+	\def\withyellow{$(7)} \
+	\def\csvfilename{$(8)} \
+	\def\footerfile{$(9)} \
 	\input{tex/a4-template.tex}"
 
 # wget csv. POC avec "semantic version".
@@ -58,8 +59,8 @@ TEX = \
 $(cefr_dir)/beginner-abc_order.csv: $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
-beginner-abc_order.pdf: $(cefr_dir)/beginner-abc_order.csv
-	$(call TEX,$(basename $@),4,30,17,1.1,no,$<,$(footer_fr))
+RU-FR-beginner-abc_order.pdf: $(cefr_dir)/beginner-abc_order.csv
+	$(call TEX,$(basename $@),4,30,17,1.1,transFr,no,$<,$(footer_fr))
 
 #RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf: RU-FR-beginner-freq_order.csv RU-FR-beginner-abc_order.csv
 #	$(call TEX,$(job_name),4,30,17,1,yes,$(csv_dst))
