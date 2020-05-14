@@ -33,7 +33,8 @@
 
   \csvstyle{myStyle}{
     longtable=p{30mm}>{\small}p{17mm}, % each column = 40mm. 5 columns = 200mm
-    separator=semicolon
+    separator=semicolon,
+    head 
   }
     %late after head=\\\hline\rowcolor{yellow!50},
     %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}
@@ -41,8 +42,8 @@
     %table head=\hline & Verbe & Traduction\\\hline\hline,
     %late after line=\\\hline}
   \csvreader[myStyle]{\csvfilename}
-    {verb=\verb,transFr=\transFr}
-    {\verb & \transFr} % specify your columns here
+    {verb=\verb,\transfield=\trans}
+    {\verb & \trans} % specify your columns here
   \unskip
   \unpenalty
   \unpenalty
