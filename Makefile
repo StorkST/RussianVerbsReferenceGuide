@@ -38,8 +38,6 @@ TEX = \
 	\def\footerfile{$(8)} \
 	\input{tex/a4-template.tex}"
 
-BEGGINER_TEX := $(call TEX,4)
-
 # wget csv. POC avec "semantic version".
 # Pour chaque langue:
 # 	1. generer liste avec Python
@@ -57,10 +55,10 @@ BEGGINER_TEX := $(call TEX,4)
 #RU-FR-beginner-freq_order.csv: $(russian_verbs_c)
 #	$(call extract_csv,$(beginner),freq,$@)
 	
-$(cefr_dir)/RU-FR-beginner-abc_order.csv: $(russian_verbs_c)
+$(cefr_dir)/beginner-abc_order.csv: $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
-RU-FR-beginner-abc_order.pdf: $(cefr_dir)/RU-FR-beginner-abc_order.csv
+beginner-abc_order.pdf: $(cefr_dir)/beginner-abc_order.csv
 	$(call TEX,$(basename $@),4,30,17,1.1,no,$<,$(footer_fr))
 
 #RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf: RU-FR-beginner-freq_order.csv RU-FR-beginner-abc_order.csv
@@ -114,6 +112,4 @@ clean:
 veryclean: clean
 	#$(RM) *.pdf
 	$(RM) -rf $(output_dir)
-
-distclean: veryclean
 
