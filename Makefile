@@ -6,7 +6,9 @@
 # $id$
 #
 
-RussianVerbsC = RussianVerbsClassification.csv
+russian_verbs_c = RussianVerbsClassification.csv
+
+yellow_field = Движение
 
 version_ru_fr = v_beta
 version_ru_en = v_alpha
@@ -22,7 +24,7 @@ output_dir := build
 cefr_dir := $(output_dir)/cefr
 
 extract_csv = \
-	python3.8 extract-russian_verbs_classification.py --cefr-levels $(1) --order $(2) --yellow yellow_field > $(3)
+	python3.8 extract-russian_verbs_classification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
 
 TEX = \
 	xelatex -jobname=$(1) \
@@ -50,10 +52,10 @@ BEGGINER_TEX := $(call TEX,4)
 #RU-FR-beginner-freq_order.csv
 #RU-FR-beginner-freq_order-colored.csv
 
-RU-FR-beginner-freq_order.csv: $(RussianVerbsC)
-	$(call extract_csv,$(beginner),freq,$@)
+#RU-FR-beginner-freq_order.csv: $(russian_verbs_c)
+#	$(call extract_csv,$(beginner),freq,$@)
 	
-RU-FR-beginner-abc_order.csv: $(RussianVerbsC)
+RU-FR-beginner-abc_order.csv: $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
 RU-FR-beginner-abc_order.pdf: cefr/RU-FR-beginner-abc_order.csv
