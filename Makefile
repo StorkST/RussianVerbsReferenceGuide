@@ -22,18 +22,20 @@ advanced = C1 C2
 
 output_dir := build
 cefr_dir := $(output_dir)/cefr
+OUT_DIR = $(output_dir) $(cefr_dir)
 
 extract_csv = \
-	python3.8 extract-russian_verbs_classification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
+	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
 
 TEX = \
 	xelatex -jobname=$(1) \
 	"\def\numcolumns{$(2)} \
 	\def\widthleftcol{$(3)} \
 	\def\widthrightcol{$(4)} \
-	\def\baselinestretch{$(5)} \
+	\def\baselinevar{$(5)} \
 	\def\withyellow{$(6)} \
 	\def\csvfilename{$(7)} \
+	\def\footerfile{$(8)} \
 	\input{tex/a4-template.tex}"
 
 BEGGINER_TEX := $(call TEX,4)
@@ -55,11 +57,11 @@ BEGGINER_TEX := $(call TEX,4)
 #RU-FR-beginner-freq_order.csv: $(russian_verbs_c)
 #	$(call extract_csv,$(beginner),freq,$@)
 	
-RU-FR-beginner-abc_order.csv: $(russian_verbs_c)
+$(cefr_dir)/RU-FR-beginner-abc_order.csv: $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
-RU-FR-beginner-abc_order.pdf: cefr/RU-FR-beginner-abc_order.csv
-	$(call TEX,$(basename $@),4,30,17,1,no,$<)
+RU-FR-beginner-abc_order.pdf: $(cefr_dir)/RU-FR-beginner-abc_order.csv
+	$(call TEX,$(basename $@),4,30,17,1.1,no,$<,$(footer_fr))
 
 #RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf: RU-FR-beginner-freq_order.csv RU-FR-beginner-abc_order.csv
 #	$(call TEX,$(job_name),4,30,17,1,yes,$(csv_dst))
@@ -99,19 +101,19 @@ RU-FR-beginner-abc_order.pdf: cefr/RU-FR-beginner-abc_order.csv
 #	build_ru_fr_intermediate
 #	build_ru_fr_advanced
 
-all:
-	RU-FR-beginner-abc_order.pdf
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
+
+directories: $(OUT_DIR)
+
+all: directories RU-FR-beginner-abc_order.pdf
 
 clean:
-	$(RM) *.log *.aux \
-	*.cfg *.glo *.idx *.toc \
-	*.ilg *.ind *.out *.lof \
-	*.lot *.bbl *.blg *.gls \
-	*.dvi *.ps *.tgz *.zip
+	$(RM) *.log *.aux
 
 veryclean: clean
-	$(RM) *.pdf
-	$(RM) build/*
+	#$(RM) *.pdf
+	$(RM) -rf $(output_dir)
 
 distclean: veryclean
 

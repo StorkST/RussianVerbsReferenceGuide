@@ -24,7 +24,7 @@
 \setlength{\columnseprule}{0.1pt} % width of drawn line between columns
 \setlength\tabcolsep{0.5mm} % spacing in table: between Russian verbs and translation
 
-\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{\baselinevar}
 
 \begin{document}
   \begin{adjmulticols}{4}{}{}
@@ -50,7 +50,7 @@
   \unvbox\ltmcbox
 
   \begin{addmargin}[1mm]{0mm}
-    \input{footer-fr.tex}
+    \input{\footerfile}
   \end{addmargin}
 
   \end{adjmulticols}
