@@ -60,12 +60,15 @@ $(addprefix $(cefr_dir)/,beginner-abc_order.csv): $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
 RU-FR-%: trans = transFr
+color = no
+%colored.pdf: color = yes
+
 RU-EN-%: trans = transEn
 
 RU-FR-beginner-abc_order = RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf
 
-$(RU-FR-beginner-abc_order): RU-FR-beginner-abc_order%: $(addprefix $(cefr_dir)/,beginner-abc_order.csv) $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
-	$(call TEX,$(basename $@),4,30,17,1.1,$(trans),no,$<,$(footer_fr))
+$(RU-FR-beginner-abc_order): $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
+	$(call TEX,$(basename $@),4,30,17,1,$(trans),$(color),$<,$(footer_fr))
 
 #RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf: RU-FR-beginner-freq_order.csv RU-FR-beginner-abc_order.csv
 #	$(call TEX,$(job_name),4,30,17,1,yes,$(csv_dst))
@@ -110,7 +113,7 @@ $(OUT_DIR):
 
 directories: $(OUT_DIR)
 
-all: directories RU-FR-beginner-abc_order.pdf
+all: directories $(RU-FR-beginner-abc_order)
 
 clean:
 	$(RM) *.log *.aux
