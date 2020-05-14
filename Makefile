@@ -28,7 +28,7 @@ extract_csv = \
 	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
 
 TEX = \
-	xelatex -output-directory $(output_dir) -output-jobname=$(1) \
+	xelatex -output-directory $(output_dir) -jobname=$(1) \
 	"\def\numcolumns{$(2)} \
 	\def\widthleftcol{$(3)} \
 	\def\widthrightcol{$(4)} \
@@ -56,10 +56,10 @@ TEX = \
 #RU-FR-beginner-freq_order.csv: $(russian_verbs_c)
 #	$(call extract_csv,$(beginner),freq,$@)
 	
-$(cefr_dir)/beginner-abc_order.csv: $(russian_verbs_c)
+$(addprefix $(cefr_dir)/,beginner-abc_order.csv): $(russian_verbs_c)
 	$(call extract_csv,$(beginner),abc,$@)
 
-RU-FR-beginner-abc_order.pdf: $(cefr_dir)/beginner-abc_order.csv
+RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 	$(call TEX,$(basename $@),4,30,17,1.1,transFr,no,$<,$(footer_fr))
 
 #RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf: RU-FR-beginner-freq_order.csv RU-FR-beginner-abc_order.csv
