@@ -48,6 +48,7 @@ TEX = \
 #getcsv:
 #	curl -s "https://api.github.com/repos/Stork_ST/core_russian_verbs/commits?path=russian_verbs_classification.csv" | jq -r '.[0].commit.committer.date'
 
+## Create specific CSV file for each level (one file contains translation for every language). $(*F) sets the CEFR levels by calling the right var containing them.
 $(addprefix $(cefr_dir)/,%-abc_order.csv): $(russian_verbs_c)
 	$(call extract_csv,$($(*F)),abc,$@)
 
@@ -65,6 +66,7 @@ intermediatesPDF = RU-FR-intermediate-% RU-EN-intermediate-%
 $(beginnersPDF) $(intermediatesPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
 $(beginnersPDF): baselinevar = 1.1
 
+# TODO: addsuffix to stems abc_order.pdf, abc_order_colored.pdf
 RU-FR-beginner = RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf
 
 RU-FR-beginner-freq_order%: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
