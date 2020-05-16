@@ -83,12 +83,28 @@ langs = RU-FR RU-EN
 all_beginners_abc = $(foreach lang, $(1), $(lang)-beginner-abc_order.pdf $(lang)-beginner-abc_order-colored.pdf)
 all_beginners_freq = $(foreach lang, $(1), $(lang)-beginner-freq_order.pdf $(lang)-beginner-freq_order-colored.pdf)
 
+all_intermediates_abc = $(foreach lang, $(1), $(lang)-intermediate-abc_order.pdf $(lang)-intermediate-abc_order-colored.pdf)
+all_intermediates_freq = $(foreach lang, $(1), $(lang)-intermediate-freq_order.pdf $(lang)-intermediate-freq_order-colored.pdf)
+
+all_advanceds_abc = $(foreach lang, $(1), $(lang)-advanced-abc_order.pdf $(lang)-advanced-abc_order-colored.pdf)
+all_advanceds_freq = $(foreach lang, $(1), $(lang)-advanced-freq_order.pdf $(lang)-advanced-freq_order-colored.pdf)
+
+
 $(call all_beginners_abc,$(langs)):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 
 $(call all_beginners_freq,$(langs)):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 
+$(call all_intermediates_abc,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
+
+$(call all_intermediates_freq,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
+
+$(call all_advanceds_abc,$(langs)):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
+
+$(call all_advanceds_freq,$(langs)):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
+
 %.pdf:
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
+
 
 ## Create specific CSV file for each level (one file contains translation for every language)
 ## $(*F) sets the CEFR levels by calling the right var containing them
