@@ -66,16 +66,21 @@ intermediatesPDF = RU-FR-intermediate-% RU-EN-intermediate-%
 $(beginnersPDF) $(intermediatesPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
 $(beginnersPDF): baselinevar = 1.1
 
-# TODO: addsuffix to stems abc_order.pdf, abc_order_colored.pdf
-RU-FR-beginner = RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf RU-FR-beginner-freq_order.pdf RU-FR-beginner-freq_order-colored.pdf
+# Name files to produce
+# Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
+suffix_files = abc_order.pdf abc_order-colored.pdf freq_order.pdf freq_order-colored.pdf
+files_level = $(addprefix $(1), $(suffix_files))
+files_lang = $(call files_level,$(1)-beginner-,$(files_level)) $(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
+RU-FR: $(call files_lang,RU-FR)
 
+# Rules to produce files
 RU-FR-beginner-freq_order%: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 RU-FR-beginner-abc_order%: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
-RU-FR: $(RU-FR-beginner)
+#RU-FR: $(RU-FR-beginner)
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
