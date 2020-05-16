@@ -16,15 +16,15 @@
 \usepackage{adjmulticol}
 \setmainfont{XCharter}
 \usepackage[table]{xcolor}
-
 \pagestyle{empty}
 
-%\setlength{\topmargin}{-10.4mm}
 \newsavebox\ltmcbox
 
 \setlength{\columnsep}{0mm} % adjust spacing between columns
 \setlength{\columnseprule}{0.1pt} % width of drawn line between columns
 \setlength\tabcolsep{0.5mm} % spacing in table: between Russian verbs and translation
+
+\renewcommand{\baselinestretch}{\baselinevar}
 
 \begin{document}
   \begin{adjmulticols}{3}{}{}
@@ -34,7 +34,7 @@
   \csvstyle{myStyle}{
     longtable=p{44mm}>{\small}p{21mm}, % each column = 40mm. 5 columns = 200mm
     separator=semicolon
-  } % TODO: reduce russian size. Change font ?
+  }
     %late after head=\\\hline\rowcolor{yellow!50},
     %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}
     %head to column names,

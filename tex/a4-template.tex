@@ -1,4 +1,4 @@
-\documentclass[version=last,fontsize=7pt]{scrartcl}
+\documentclass[version=last,fontsize=\fontsizevar]{scrartcl}
 \usepackage[
     a4paper,
     total={200mm,281mm},
@@ -33,8 +33,7 @@
 
   \csvstyle{myStyle}{
     longtable=p{30mm}>{\small}p{17mm}, % each column = 40mm. 5 columns = 200mm
-    separator=semicolon,
-    head 
+    separator=semicolon
   }
     %late after head=\\\hline\rowcolor{yellow!50},
     %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}

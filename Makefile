@@ -6,15 +6,17 @@
 # $id$
 #
 
+langs = RU-FR #RU-EN
 russian_verbs_c = RussianVerbsClassification.csv
 yellow_field = Движение
-version_ru_fr = v_beta
-version_ru_en = v_alpha
-footer_fr = ./tex/footer-fr.tex
-footer_en = ./tex/footer-en.tex
 beginner = A1 A2 B1
 intermediate = B2
 advanced = C1 C2
+
+version_ru_fr = v_beta
+footer_fr = ./tex/footer-fr.tex
+version_ru_en = v_alpha
+footer_en = ./tex/footer-en.tex
 
 output_dir := build
 cefr_dir := $(output_dir)/cefr
@@ -25,14 +27,15 @@ extract_csv = \
 
 TEX = \
 	xelatex -output-directory $(output_dir) -jobname=$(1) \
-	"\def\numcolumns{$(2)} \
-	\def\widthleftcol{$(3)} \
-	\def\widthrightcol{$(4)} \
-	\def\baselinevar{$(5)} \
-	\def\transfield{$(6)} \
-	\def\withyellow{$(7)} \
-	\def\csvfilename{$(8)} \
-	\def\footerfile{$(9)} \
+	"\def\fontsizevar{$(2)} \
+	\def\numcolumns{$(3)} \
+	\def\widthleftcol{$(4)} \
+	\def\widthrightcol{$(5)} \
+	\def\baselinevar{$(6)} \
+	\def\transfield{$(7)} \
+	\def\withyellow{$(8)} \
+	\def\csvfilename{$(9)} \
+	\def\footerfile{$(10)} \
 	\input{tex/a4-template.tex}"
 
 # wget csv. POC avec "semantic version".
@@ -47,14 +50,14 @@ TEX = \
 # Name files to produce
 # Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
 
-suffix_files_abc = abc_order.pdf abc_order-colored.pdf
-suffix_files_freq = freq_order.pdf freq_order-colored.pdf
-suffix_files = $(suffix_files_abc) $(suffix_files_freq)
+suffix_files_abc := abc_order.pdf abc_order-colored.pdf
+suffix_files_freq := freq_order.pdf freq_order-colored.pdf
+suffix_files := $(suffix_files_abc) $(suffix_files_freq)
 
 files_level_abc = $(addprefix $(1),$(suffix_files_abc))
 files_level_freq = $(addprefix $(1),$(suffix_files_freq))
 files_level = $(files_level_abc) $(files_level_freq)
-files_lang = $(call files_level,$(1)-beginner-,$(files_level)) #$(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
+files_lang = $(call files_level,$(1)-beginner-,$(files_level)) $(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
 files_langs = $(foreach lang,$(1),$(call files_lang,$(lang)))
 
 # Functions to build every abc/freq field for each language and levels
@@ -68,21 +71,35 @@ files_intermediates_freq = $(call files_level_lang_freq,$(1),-intermediate-)
 files_advanceds_abc = $(call files_level_lang_abc,$(1),-advanced-)
 files_advanceds_freq = $(call files_level_lang_freq,$(1),-advanced-)
 
-# Specific variables
+
+# Specific variables. Configuration of Latex template.
+
+beginnersPDF_abc := $(call files_beginners_abc,$(langs))
+beginnersPDF_freq := $(call files_beginners_freq,$(langs))
+beginnersPDF := $(beginnersPDF_abc) $(beginnersPDF_freq)
+
+intermediatesPDF_abc := $(call files_intermediates_abc,$(langs))
+intermediatesPDF_freq := $(call files_intermediates_freq,$(langs))
+intermediatesPDF := $(intermediatesPDF_abc) $(intermediatesPDF_freq)
+
+advancedsPDF_abc := $(call files_advanceds_abc,$(langs))
+advancedsPDF_freq := $(call files_advanceds_freq,$(langs))
+advancedsPDF := $(advancedsPDF_abc) $(advancedsPDF_freq)
 
 RU-FR-%: transfield = transFr
 RU-EN-%: transfield = transEn
 color = no
 %colored.pdf: color = yes
+$(beginnersPDF) $(intermediatesPDF): fontsizevar = 7
+$(beginnersPDF) $(intermediatesPDF): numcolumns = 4
+$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17
+$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17
+$(intermediatesPDF) $(advancedsPDF): baselinevar = 1
+$(advancedsPDF): fontsizevar = 9
+$(advancedsPDF): numcolumns = 3
+$(advancedsPDF): widthleftcol = 44
+$(advancedsPDF): widthrightcol = 21
 
-#TODO: debug
-beginnersPDF = $(call files_beginners_abc,$(langs)) $(call files_beginners_freq,$(langs))
-intermediatesPDF = $(call files_intermediates_abc,$(langs)) $(call files_intermediates_freq,$(langs))
-advancedsPDF = $(call files_advanceds_abc,$(langs)) $(call files_advanceds_freq,$(langs))
-
-$(beginnersPDF) $(intermediatesPDF) $(advancedPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
-$(beginnersPDF): baselinevar = 1.1
-$(advancedsPDF): numcolumns = 3 widthleftcol = 44 widthrightcol = 21
 
 # MAIN: Rules to produce files
 
@@ -90,22 +107,20 @@ all: directories $(call files_lang,RU-FR)
 
 RU-FR: $(call files_langs,$(langs))
 
-langs = RU-FR #RU-EN
+$(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 
-$(call files_beginners_abc,$(langs)):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
+$(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 
-$(call files_beginners_freq,$(langs)):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
+$(intermediatesPDF_abc):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
 
-$(call files_intermediates_abc,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
+$(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
 
-$(call files_intermediates_freq,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
+$(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 
-$(call files_advanceds_abc,$(langs)):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
-
-$(call files_advanceds_freq,$(langs)):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
+$(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
 %.pdf:
-	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
+	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 
 ## Create specific CSV file for each level (one file contains translation for every language)
