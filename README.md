@@ -6,7 +6,7 @@ max685 rows RU/FR or RU/EN, 23chars RU/17chars fr - ~95 per row:
 xelatex "\def\csvfilename{} \input{a4-4columns-colored.tex}"
 
 max420 rows RU/FR or RU/EN 25chars RU/16 chars fr - ~70 per row :
-xelatex "\def\csvfilename{} \input{a4-3columns.tex}"
+xelatex "\def\csvfilename{build/cefr/advanced-abc_order.csv} \input{a4-3columns.tex}"
 
 TODO:
   * remove space after comma if enough to keep it on one line (<16 or 17 chars)

@@ -90,15 +90,16 @@ RU-FR-%: transfield = transFr
 RU-EN-%: transfield = transEn
 color = no
 %colored.pdf: color = yes
-$(beginnersPDF) $(intermediatesPDF): fontsizevar = 7
+$(beginnersPDF) $(intermediatesPDF): fontsizevar = 7pt
 $(beginnersPDF) $(intermediatesPDF): numcolumns = 4
-$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17
-$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17
+$(beginnersPDF) $(intermediatesPDF): widthleftcol = 30mm
+$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17mm
 $(intermediatesPDF) $(advancedsPDF): baselinevar = 1
-$(advancedsPDF): fontsizevar = 9
+$(beginnersPDF): baselinevar = 1.1
+$(advancedsPDF): fontsizevar = 9pt
 $(advancedsPDF): numcolumns = 3
-$(advancedsPDF): widthleftcol = 44
-$(advancedsPDF): widthrightcol = 21
+$(advancedsPDF): widthleftcol = 44mm
+$(advancedsPDF): widthrightcol = 21mm
 
 
 # MAIN: Rules to produce files
@@ -108,15 +109,12 @@ all: directories $(call files_lang,RU-FR)
 RU-FR: $(call files_langs,$(langs))
 
 $(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
-
 $(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 
 $(intermediatesPDF_abc):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
-
 $(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
 
 $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
-
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
 %.pdf:
