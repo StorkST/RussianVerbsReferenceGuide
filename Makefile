@@ -6,21 +6,21 @@
 # $id$
 #
 
-langs = RU-FR RU-EN
-russian_verbs_c = RussianVerbsClassification.csv
-yellow_field = Движение
-beginner = A1 A2 B1
-intermediate = B2
-advanced = C1 C2
+langs := RU-FR RU-EN
+russian_verbs_c := RussianVerbsClassification.csv
+yellow_field := Движение
+beginner := A1 A2 B1
+intermediate := B2
+advanced := C1 C2
 
-version_ru_fr = v_beta
-footer_fr = ./tex/footer-fr.tex
-version_ru_en = v_alpha
-footer_en = ./tex/footer-en.tex
+version_ru_fr := v_beta
+footer_fr := ./tex/footer-fr.tex
+version_ru_en := v_alpha
+footer_en := ./tex/footer-en.tex
 
 output_dir := build
 cefr_dir := $(output_dir)/cefr
-OUT_DIR = $(output_dir) $(cefr_dir)
+OUT_DIR := $(output_dir) $(cefr_dir)
 
 extract_csv = \
 	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
@@ -103,8 +103,16 @@ $(advancedsPDF): widthrightcol = 21mm
 
 
 # MAIN: Rules to produce files
+.PHONY: all directories $(langs) beginner intermediate advanced
 
-all: directories $(call files_langs,$(langs))
+all: $(call files_langs,$(langs))
+
+$(langs):
+	$(MAKE) $(call files_langs,$@)
+
+beginner: $(beginnersPDF)
+intermediate: $(intermediatesPDF)
+advanced: $(advancedsPDF)
 
 $(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 $(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
@@ -115,7 +123,7 @@ $(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
 $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
-%.pdf:
+%.pdf: directories
 	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 
@@ -133,12 +141,13 @@ $(addprefix $(cefr_dir)/,%-freq_order.csv): $(russian_verbs_c)
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
 
-directories: $(OUT_DIR)
+directories: $(OUT_DIR) # Create output directories
 
 clean:
-	$(RM) *.log *.aux
+	$(RM) -r $(output_dir)/*.aux
+	$(RM) -r $(output_dir)/*.log
 
-veryclean: clean
-	#$(RM) *.pdf
-	$(RM) -rf $(output_dir)
+veryclean:
+	$(RM) -r $(output_dir)/*
+	$(RM) -r $(cefr_dir)/*
 
