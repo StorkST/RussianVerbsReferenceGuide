@@ -6,7 +6,7 @@
 # $id$
 #
 
-langs = RU-FR #RU-EN
+langs = RU-FR RU-EN
 russian_verbs_c = RussianVerbsClassification.csv
 yellow_field = Движение
 beginner = A1 A2 B1
@@ -104,9 +104,7 @@ $(advancedsPDF): widthrightcol = 21mm
 
 # MAIN: Rules to produce files
 
-all: directories $(call files_lang,RU-FR)
-
-RU-FR: $(call files_langs,$(langs))
+all: directories $(call files_langs,$(langs))
 
 $(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 $(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
