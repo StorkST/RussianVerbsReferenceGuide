@@ -52,10 +52,11 @@ TEX = \
 # Name files to produce
 # Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
 
-suffix_files = abc_order.pdf abc_order-colored.pdf #freq_order.pdf freq_order-colored.pdf
+suffix_files = abc_order.pdf abc_order-colored.pdf freq_order.pdf freq_order-colored.pdf
 files_level = $(addprefix $(1), $(suffix_files))
 files_lang = $(call files_level,$(1)-beginner-,$(files_level)) #$(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
 
+files_beginners = $(call files_level,-beginner-))
 
 # Specific variables
 
@@ -77,12 +78,17 @@ all: directories RU-FR
 
 RU-FR: $(call files_lang,RU-FR)
 
-RU-FR-beginner-abc_order.pdf RU-FR-beginner-abc_order-colored.pdf: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
-	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
+langs = RU-FR RU-EN
 
-%-beginner-freq_order.pdf %-beginner-freq_order-colored.pdf: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
-	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
+all_beginners_abc = $(foreach lang, $(1), $(lang)-beginner-abc_order.pdf $(lang)-beginner-abc_order-colored.pdf)
+all_beginners_freq = $(foreach lang, $(1), $(lang)-beginner-freq_order.pdf $(lang)-beginner-freq_order-colored.pdf)
 
+$(call all_beginners_abc,$(langs)):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
+
+$(call all_beginners_freq,$(langs)):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
+
+%.pdf:
+	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 ## Create specific CSV file for each level (one file contains translation for every language)
 ## $(*F) sets the CEFR levels by calling the right var containing them
