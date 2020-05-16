@@ -7,15 +7,11 @@
 #
 
 russian_verbs_c = RussianVerbsClassification.csv
-
 yellow_field = Движение
-
 version_ru_fr = v_beta
 version_ru_en = v_alpha
-
 footer_fr = ./tex/footer-fr.tex
 footer_en = ./tex/footer-en.tex
-
 beginner = A1 A2 B1
 intermediate = B2
 advanced = C1 C2
@@ -48,7 +44,6 @@ TEX = \
 #getcsv:
 #	curl -s "https://api.github.com/repos/Stork_ST/core_russian_verbs/commits?path=russian_verbs_classification.csv" | jq -r '.[0].commit.committer.date'
 
-
 # Name files to produce
 # Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
 
@@ -60,6 +55,7 @@ files_level_abc = $(addprefix $(1),$(suffix_files_abc))
 files_level_freq = $(addprefix $(1),$(suffix_files_freq))
 files_level = $(files_level_abc) $(files_level_freq)
 files_lang = $(call files_level,$(1)-beginner-,$(files_level)) #$(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
+files_langs = $(foreach lang,$(1),$(call files_lang,$(lang)))
 
 # Functions to build every abc/freq field for each language and levels
 files_level_lang_abc = $(foreach lang,$(1),$(call files_level_abc,$(lang)$(2)))
@@ -79,18 +75,20 @@ RU-EN-%: transfield = transEn
 color = no
 %colored.pdf: color = yes
 
-beginnersPDF = RU-FR-beginner-% RU-EN-beginner-%
-intermediatesPDF = RU-FR-intermediate-% RU-EN-intermediate-%
+#TODO: debug
+beginnersPDF = $(call files_beginners_abc,$(langs)) $(call files_beginners_freq,$(langs))
+intermediatesPDF = $(call files_intermediates_abc,$(langs)) $(call files_intermediates_freq,$(langs))
+advancedsPDF = $(call files_advanceds_abc,$(langs)) $(call files_advanceds_freq,$(langs))
 
-$(beginnersPDF) $(intermediatesPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
+$(beginnersPDF) $(intermediatesPDF) $(advancedPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
 $(beginnersPDF): baselinevar = 1.1
+$(advancedsPDF): numcolumns = 3 widthleftcol = 44 widthrightcol = 21
 
-
-# Rules to produce files
+# MAIN: Rules to produce files
 
 all: directories $(call files_lang,RU-FR)
 
-RU-FR: $(call files_lang,$(langs))
+RU-FR: $(call files_langs,$(langs))
 
 langs = RU-FR #RU-EN
 
