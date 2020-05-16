@@ -48,12 +48,16 @@ TEX = \
 #getcsv:
 #	curl -s "https://api.github.com/repos/Stork_ST/core_russian_verbs/commits?path=russian_verbs_classification.csv" | jq -r '.[0].commit.committer.date'
 
-## Create specific CSV file for each level (one file contains translation for every language). $(*F) sets the CEFR levels by calling the right var containing them.
-$(addprefix $(cefr_dir)/,%-abc_order.csv): $(russian_verbs_c)
-	$(call extract_csv,$($(*F)),abc,$@)
 
-$(addprefix $(cefr_dir)/,%-freq_order.csv): $(russian_verbs_c)
-	$(call extract_csv,$($(*F)),freq,$@)
+# Name files to produce
+# Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
+
+suffix_files = abc_order.pdf abc_order-colored.pdf freq_order.pdf freq_order-colored.pdf
+files_level = $(addprefix $(1), $(suffix_files))
+files_lang = $(call files_level,$(1)-beginner-,$(files_level)) $(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
+
+
+# Specific variables
 
 RU-FR-%: transfield = transFr
 RU-EN-%: transfield = transEn
@@ -66,28 +70,34 @@ intermediatesPDF = RU-FR-intermediate-% RU-EN-intermediate-%
 $(beginnersPDF) $(intermediatesPDF): numcolumns = 4 widthleftcol = 30 widthrightcol = 17 baselinevar = 1
 $(beginnersPDF): baselinevar = 1.1
 
-# Name files to produce
-# Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
-suffix_files = abc_order.pdf abc_order-colored.pdf freq_order.pdf freq_order-colored.pdf
-files_level = $(addprefix $(1), $(suffix_files))
-files_lang = $(call files_level,$(1)-beginner-,$(files_level)) $(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
-RU-FR: $(call files_lang,RU-FR)
 
 # Rules to produce files
+
+all: directories RU-FR
+
+RU-FR: $(call files_lang,RU-FR)
+
 RU-FR-beginner-freq_order%: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 RU-FR-beginner-abc_order%: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
-#RU-FR: $(RU-FR-beginner)
+## Create specific CSV file for each level (one file contains translation for every language)
+## $(*F) sets the CEFR levels by calling the right var containing them
+$(addprefix $(cefr_dir)/,%-abc_order.csv): $(russian_verbs_c)
+	$(call extract_csv,$($(*F)),abc,$@)
+
+$(addprefix $(cefr_dir)/,%-freq_order.csv): $(russian_verbs_c)
+	$(call extract_csv,$($(*F)),freq,$@)
+
+
+# Other rules
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
 
 directories: $(OUT_DIR)
-
-all: directories RU-FR
 
 clean:
 	$(RM) *.log *.aux
