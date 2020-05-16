@@ -52,11 +52,25 @@ TEX = \
 # Name files to produce
 # Generate list such as: RU-FR-beginner-abc_order.pdfR U-FR-beginner-abc_order_colored.pdf... RU-FR-advanced-freq_order_colored.pdf
 
-suffix_files = abc_order.pdf abc_order-colored.pdf freq_order.pdf freq_order-colored.pdf
-files_level = $(addprefix $(1), $(suffix_files))
+suffix_files_abc = abc_order.pdf abc_order-colored.pdf
+suffix_files_freq = freq_order.pdf freq_order-colored.pdf
+suffix_files = $(suffix_files_abc) $(suffix_files_freq)
+
+files_level_abc = $(addprefix $(1),$(suffix_files_abc))
+files_level_freq = $(addprefix $(1),$(suffix_files_freq))
+files_level = $(files_level_abc) $(files_level_freq)
 files_lang = $(call files_level,$(1)-beginner-,$(files_level)) #$(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
 
-files_beginners = $(call files_level,-beginner-))
+# Functions to build every abc/freq field for each language and levels
+files_level_lang_abc = $(foreach lang,$(1),$(call files_level_abc,$(lang)$(2)))
+files_level_lang_freq = $(foreach lang,$(1),$(call files_level_freq,$(lang)$(2)))
+
+files_beginners_abc = $(call files_level_lang_abc,$(1),-beginner-)
+files_beginners_freq = $(call files_level_lang_freq,$(1),-beginner-)
+files_intermediates_abc = $(call files_level_lang_abc,$(1),-intermediate-)
+files_intermediates_freq = $(call files_level_lang_freq,$(1),-intermediate-)
+files_advanceds_abc = $(call files_level_lang_abc,$(1),-advanced-)
+files_advanceds_freq = $(call files_level_lang_freq,$(1),-advanced-)
 
 # Specific variables
 
@@ -74,33 +88,23 @@ $(beginnersPDF): baselinevar = 1.1
 
 # Rules to produce files
 
-all: directories RU-FR
+all: directories $(call files_lang,RU-FR)
 
-RU-FR: $(call files_lang,RU-FR)
+RU-FR: $(call files_lang,$(langs))
 
-langs = RU-FR RU-EN
+langs = RU-FR #RU-EN
 
-all_beginners_abc = $(foreach lang, $(1), $(lang)-beginner-abc_order.pdf $(lang)-beginner-abc_order-colored.pdf)
-all_beginners_freq = $(foreach lang, $(1), $(lang)-beginner-freq_order.pdf $(lang)-beginner-freq_order-colored.pdf)
+$(call files_beginners_abc,$(langs)):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 
-all_intermediates_abc = $(foreach lang, $(1), $(lang)-intermediate-abc_order.pdf $(lang)-intermediate-abc_order-colored.pdf)
-all_intermediates_freq = $(foreach lang, $(1), $(lang)-intermediate-freq_order.pdf $(lang)-intermediate-freq_order-colored.pdf)
+$(call files_beginners_freq,$(langs)):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
 
-all_advanceds_abc = $(foreach lang, $(1), $(lang)-advanced-abc_order.pdf $(lang)-advanced-abc_order-colored.pdf)
-all_advanceds_freq = $(foreach lang, $(1), $(lang)-advanced-freq_order.pdf $(lang)-advanced-freq_order-colored.pdf)
+$(call files_intermediates_abc,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
 
+$(call files_intermediates_freq,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
 
-$(call all_beginners_abc,$(langs)):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
+$(call files_advanceds_abc,$(langs)):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 
-$(call all_beginners_freq,$(langs)):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
-
-$(call all_intermediates_abc,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
-
-$(call all_intermediates_freq,$(langs)):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
-
-$(call all_advanceds_abc,$(langs)):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
-
-$(call all_advanceds_freq,$(langs)):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
+$(call files_advanceds_freq,$(langs)):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
 %.pdf:
 	$(call TEX,$(basename $@),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
