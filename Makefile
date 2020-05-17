@@ -76,6 +76,7 @@ files_intermediates_freq = $(call files_level_lang_freq,$(1),-intermediate-)
 files_advanceds_abc = $(call files_level_lang_abc,$(1),-advanced-)
 files_advanceds_freq = $(call files_level_lang_freq,$(1),-advanced-)
 
+lang_level := $(foreach lang,$(langs),$(lang)-beginner $(lang)-intermediate $(lang)-advanced)
 
 # Specific variables. Configuration of Latex template.
 
@@ -113,7 +114,7 @@ $(advancedsPDF): widthrightcol := 21mm
 
 
 # MAIN: Rules to produce files
-.PHONY: all dir $(langs) beginner intermediate advanced
+.PHONY: all dir $(langs) $(lang_level) beginner intermediate advanced
 
 all: dir $(call files_langs,$(langs))
 
@@ -122,7 +123,7 @@ $(langs): dir
 	$(MAKE) $(call files_langs,$@)
 
 # ex RU-FR-beginner RU-FR-intermediate
-$(foreach lang,$(langs),$(lang)-beginner $(lang)-intermediate $(lang)-advanced): dir
+$(lang_level): dir
 	$(if $(findstring beginner,$@),$(MAKE) $(call files_level,$@-))
 	$(if $(findstring intermediate,$@),$(MAKE) $(call files_level,$@-))
 	$(if $(findstring advanced,$@),$(MAKE) $(call files_level,$@-))
