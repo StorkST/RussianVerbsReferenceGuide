@@ -9,6 +9,7 @@
 langs := RU-FR RU-EN
 russian_verbs_c := RussianVerbsClassification.csv
 yellow_field := Движение
+yellow_when := movement
 beginner := A1 A2 B1
 intermediate := B2
 advanced := C1 C2
@@ -24,7 +25,7 @@ cefr_dir := $(output_dir)/cefr
 OUT_DIR := $(output_dir) $(cefr_dir)
 
 extract_csv = \
-	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) > $(3)
+	python3.8 extract-RussianVerbsClassification.py --cefr-levels $(1) --order $(2) --yellow $(yellow_field) $(yellow_when) > $(3)
 
 TEX = \
 	xelatex -output-directory $(output_dir) -jobname=$(1) \

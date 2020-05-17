@@ -5,7 +5,7 @@ colSep = ';'
 transSepBig = ';'
 transSepSmall = ','
 
-def genCsv(levels, yellowCol, order):
+def genCsv(levels, order, yellowCol, yellowWhen):
     with open("RussianVerbsClassification.csv", 'r', newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=';')
 
@@ -60,19 +60,22 @@ def genCsv(levels, yellowCol, order):
             p = allVerbs[verb]
             line = verb + colSep + p["usage"] + colSep + p["transFr"] + colSep + p["transEn"]
             if yellowCol != None:
-                line = line + colSep + p["yellow"]
+                line = line + colSep
+                yellowVal = 1 if p["yellow"] == yellowWhen else 0
+                line += str(yellowVal)
             print(line)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fiters and Extractions on RussianVerbsClassification.csv')
     parser.add_argument('-l', '--cefr-levels', dest='levels', required=True, nargs='+', help='')
-    parser.add_argument('-y', '--yellow', dest='yellow', nargs = '?', default=None, help='field to put in a new yellow column')
+    parser.add_argument('-y', '--yellow', dest='yellow', nargs=2, default=None, help='2 strings: the first is the name of the field to use in a new yellow column, the second is the value of the field used to set the yellow field to 1 (else it equals 0)')
     parser.add_argument('-o', '--order', dest='order', nargs='?', choices=['freq', 'abc'], default='freq', help='order to classify data, either by frequency order or by alphabetical order')
     args = parser.parse_args()
 
     levels = args.levels
-    yellowCol = args.yellow
     order = args.order
+    yellowCol = args.yellow[0]
+    yellowWhen = args.yellow[1]
 
     columnsName = ""
     columnsNameA = ["verb", "usage", "transFr", "transEn"]
@@ -83,4 +86,4 @@ if __name__ == '__main__':
     columnsName = columnsName[:-len(colSep)]
 
     print(columnsName)
-    genCsv(levels, yellowCol, order)
+    genCsv(levels, order, yellowCol, yellowWhen)
