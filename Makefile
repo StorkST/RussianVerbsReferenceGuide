@@ -13,9 +13,10 @@ beginner := A1 A2 B1
 intermediate := B2
 advanced := C1 C2
 
-version_ru_fr := v_beta
+today := $(shell date +%Y/%m/%d)
+version_ru_fr := v_beta - $(today)
 footer_fr := ./tex/footer-fr.tex
-version_ru_en := v_alpha
+version_ru_en := v_alpha - $(today)
 footer_en := ./tex/footer-en.tex
 
 output_dir := build
@@ -36,6 +37,9 @@ TEX = \
 	\def\withyellow{$(8)} \
 	\def\csvfilename{$(9)} \
 	\def\footerfile{$(10)} \
+	\def\level{$(11)} \
+	\def\refvar{\url{$(1)}} \
+	\def\version{\url{$(12)}} \
 	\input{tex/a4-template.tex}"
 
 # wget csv. POC avec "semantic version".
@@ -86,20 +90,25 @@ advancedsPDF_abc := $(call files_advanceds_abc,$(langs))
 advancedsPDF_freq := $(call files_advanceds_freq,$(langs))
 advancedsPDF := $(advancedsPDF_abc) $(advancedsPDF_freq)
 
-RU-FR-%: transfield = transFr
-RU-EN-%: transfield = transEn
-color = no
-%colored.pdf: color = yes
-$(beginnersPDF) $(intermediatesPDF): fontsizevar = 7pt
-$(beginnersPDF) $(intermediatesPDF): numcolumns = 4
-$(beginnersPDF) $(intermediatesPDF): widthleftcol = 30mm
-$(beginnersPDF) $(intermediatesPDF): widthrightcol = 17mm
-$(intermediatesPDF) $(advancedsPDF): baselinevar = 1
-$(beginnersPDF): baselinevar = 1.1
-$(advancedsPDF): fontsizevar = 9pt
-$(advancedsPDF): numcolumns = 3
-$(advancedsPDF): widthleftcol = 44mm
-$(advancedsPDF): widthrightcol = 21mm
+RU-FR-%: transfield := transFr
+RU-EN-%: transfield := transEn
+RU-FR-%: version := $(version_ru_fr)
+RU-EN-%: version := $(version_ru_en)
+color := no
+%colored.pdf: color := yes
+$(beginnersPDF): level := A1 A2 B1
+$(intermediatesPDF): level := B2
+$(advancedsPDF): level := C1 C2
+$(beginnersPDF) $(intermediatesPDF): fontsizevar := 7pt
+$(beginnersPDF) $(intermediatesPDF): numcolumns := 4
+$(beginnersPDF) $(intermediatesPDF): widthleftcol := 30mm
+$(beginnersPDF) $(intermediatesPDF): widthrightcol := 17mm
+$(intermediatesPDF) $(advancedsPDF): baselinevar := 1
+$(beginnersPDF): baselinevar := 1.1
+$(advancedsPDF): fontsizevar := 9pt
+$(advancedsPDF): numcolumns := 3
+$(advancedsPDF): widthleftcol := 44mm
+$(advancedsPDF): widthrightcol := 21mm
 
 
 # MAIN: Rules to produce files
@@ -131,7 +140,7 @@ $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
 %.pdf:
-	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
+	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr),$(level),$(version))
 
 
 ## Create specific CSV file for each level (one file contains translation for every language)
