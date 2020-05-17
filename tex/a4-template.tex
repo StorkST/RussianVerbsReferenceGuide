@@ -35,7 +35,8 @@
   \csvstyle{myStyle}{
     longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
     separator=semicolon,
-    % TODO: try csviffirstrow
+    % Dirty fix to set colored rows. Doing a different way brought linebreaks for every colored row.
+    % Bug: 1st row doesn't get colored even when it should be
     late after line=\csvifoddrow{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}
   } 
     %late after head=\\\hline\rowcolor{yellow!50},
