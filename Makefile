@@ -57,7 +57,7 @@ suffix_files := $(suffix_files_abc) $(suffix_files_freq)
 files_level_abc = $(addprefix $(1),$(suffix_files_abc))
 files_level_freq = $(addprefix $(1),$(suffix_files_freq))
 files_level = $(files_level_abc) $(files_level_freq)
-files_lang = $(call files_level,$(1)-beginner-,$(files_level)) $(call files_level,$(1)-intermediate-,$(files_level)) $(call files_level,$(1)-advanced-,$(files_level))
+files_lang = $(call files_level,$(1)-beginner-) $(call files_level,$(1)-intermediate-) $(call files_level,$(1)-advanced-)
 files_langs = $(foreach lang,$(1),$(call files_lang,$(lang)))
 
 # Functions to build every abc/freq field for each language and levels
@@ -103,16 +103,23 @@ $(advancedsPDF): widthrightcol = 21mm
 
 
 # MAIN: Rules to produce files
-.PHONY: all directories $(langs) beginner intermediate advanced
+.PHONY: all dir $(langs) beginner intermediate advanced
 
-all: $(call files_langs,$(langs))
+all: dir $(call files_langs,$(langs))
 
-$(langs):
+# ex RU-FR RU-EN
+$(langs): dir
 	$(MAKE) $(call files_langs,$@)
 
-beginner: $(beginnersPDF)
-intermediate: $(intermediatesPDF)
-advanced: $(advancedsPDF)
+# ex RU-FR-beginner RU-FR-intermediate
+$(foreach lang,$(langs),$(lang)-beginner $(lang)-intermediate $(lang)-advanced): dir
+	$(if $(findstring beginner,$@),$(MAKE) $(call files_level,$@-))
+	$(if $(findstring intermediate,$@),$(MAKE) $(call files_level,$@-))
+	$(if $(findstring advanced,$@),$(MAKE) $(call files_level,$@-))
+
+beginner: dir $(beginnersPDF)
+intermediate: dir $(intermediatesPDF)
+advanced: dir $(advancedsPDF)
 
 $(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 $(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
@@ -123,7 +130,7 @@ $(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
 $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
 
-%.pdf: directories
+%.pdf:
 	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr))
 
 
@@ -141,7 +148,7 @@ $(addprefix $(cefr_dir)/,%-freq_order.csv): $(russian_verbs_c)
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
 
-directories: $(OUT_DIR) # Create output directories
+dir: $(OUT_DIR) # Create output directories
 
 clean:
 	$(RM) -r $(output_dir)/*.aux
