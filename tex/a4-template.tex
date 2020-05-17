@@ -17,6 +17,7 @@
 \usepackage{url}
 \setmainfont{XCharter}
 \usepackage[table]{xcolor}
+\usepackage{ifthen}
 \pagestyle{empty}
 
 \newsavebox\ltmcbox
@@ -32,17 +33,21 @@
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
-  \csvstyle{myStyle}{
-    longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
-    separator=semicolon,
-    % Dirty fix to set colored rows. Doing a different way brought linebreaks for every colored row.
-    % Bug: 1st row doesn't get colored even when it should be
-    late after line=\csvifoddrow{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}
-  } 
-    %late after head=\\\hline\rowcolor{yellow!50},
-    %head to column names,
-    %table head=\hline & Verbe & Traduction\\\hline\hline,
-    %late after line=\\\hline}
+  \ifthenelse{\equal{\withyellow}{yes}}{
+    \csvstyle{myStyle}{
+      longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
+      separator=semicolon,
+      % Dirty fix to set colored rows. Doing a different way brought linebreaks for every colored row.
+      % Bug: 1st row doesn't get colored even when it should be
+      late after line=\csvifoddrow{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}
+    }
+  }{
+    \csvstyle{myStyle}{
+      longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
+      separator=semicolon
+    }
+  }
+
   \csvreader[myStyle]{\csvfilename}
     {verb=\verb,\transfield=\trans,yellow=\yellow}
     {\verb & \trans} % specify your columns here
