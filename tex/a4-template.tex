@@ -34,15 +34,22 @@
 
   \csvstyle{myStyle}{
     longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
-    separator=semicolon
+    separator=semicolon,
+    %full filter={\ifnum\yellow>0\\\rowcolor{yellow!50}\else\\\fi}
+    %full filter=\ifnumgreater{\yellow}{0}{\\\rowcolor{yellow!50} \csvfilteraccept}{\\ \csvfilteraccept}
+    % Works for odd row coloring: late after line=\csvifoddrow{\\\rowcolor{yellow}}{\\}
+    %works but empty lines 1 sur 2: before line=\ifnumgreater{\yellow}{0}{\\\rowcolor{yellow} \csvfilteraccept}{\\ \csvfilteraccept}
+    %works but empty lines before colored lines: before line=\ifnumgreater{\yellow}{0}{\\\rowcolor{red}}{}
+    %before line={\yellow}{0}{\color{red}}{}
+    %before line=\ifnumgreater{\yellow}{0}{\\\rowcolor{yellow}}{\\}
+    late after line=\csvifoddrow{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}{\ifcsvstrcmp{\yellow}{1}{\\\rowcolor{yellow}}{\\}}
   }
     %late after head=\\\hline\rowcolor{yellow!50},
-    %late after line=\csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}}
     %head to column names,
     %table head=\hline & Verbe & Traduction\\\hline\hline,
     %late after line=\\\hline}
   \csvreader[myStyle]{\csvfilename}
-    {verb=\verb,\transfield=\trans}
+    {verb=\verb,\transfield=\trans,yellow=\yellow}
     {\verb & \trans} % specify your columns here
   \unskip
   \unpenalty
