@@ -14,9 +14,9 @@ intermediate := B2
 advanced := C1 C2
 
 today := $(shell date +%Y/%m/%d)
-version_ru_fr := v_beta - $(today)
+version_ru_fr := vBeta - $(today)
 footer_fr := ./tex/footer-fr.tex
-version_ru_en := v_alpha - $(today)
+version_ru_en := vAlpha - $(today)
 footer_en := ./tex/footer-en.tex
 
 output_dir := build
@@ -38,8 +38,8 @@ TEX = \
 	\def\csvfilename{$(9)} \
 	\def\footerfile{$(10)} \
 	\def\level{$(11)} \
-	\def\refvar{\url{$(1)}} \
-	\def\version{\url{$(12)}} \
+	\def\refvar{$(subst _,\_,$(1))} \
+	\def\version{$(12)} \
 	\input{tex/a4-template.tex}"
 
 # wget csv. POC avec "semantic version".
