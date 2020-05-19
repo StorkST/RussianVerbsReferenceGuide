@@ -8,8 +8,8 @@
 
 langs := RU-FR RU-EN
 russian_verbs_c := RussianVerbsClassification.csv
-yellow_field := Движение
-yellow_when := movement
+yellow_field := Действительный
+yellow_when := действит.
 beginner := A1 A2 B1
 intermediate := B2
 advanced := C1 C2
