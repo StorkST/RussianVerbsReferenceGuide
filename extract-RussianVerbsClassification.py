@@ -1,8 +1,5 @@
 import argparse
 import csv
-#from RussianWordsClusters import cluster.RussianWordsPairsClusters as rwc
-#from RussianWordsClusters import cluster.Relation
-#import RussianWordsClusters
 from russianwords.clustering import RussianWordsPairsClusters as rwc
 from russianwords.clustering import Relation
 
