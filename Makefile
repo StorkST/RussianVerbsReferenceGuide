@@ -57,24 +57,30 @@ TEX = \
 
 suffix_files_abc := abc_order.pdf abc_order-colored.pdf
 suffix_files_freq := freq_order.pdf freq_order-colored.pdf
-suffix_files := $(suffix_files_abc) $(suffix_files_freq)
+suffix_files_freq_n_proximity := freq_n_proximity_order.pdf freq_n_proximity_order-colored.pdf
+suffix_files := $(suffix_files_abc) $(suffix_files_freq) $(suffix_files_freq_n_proximity)
 
 files_level_abc = $(addprefix $(1),$(suffix_files_abc))
 files_level_freq = $(addprefix $(1),$(suffix_files_freq))
-files_level = $(files_level_abc) $(files_level_freq)
+files_level_freq_n_proximity = $(addprefix $(1),$(suffix_files_freq_n_proximity))
+files_level = $(files_level_abc) $(files_level_freq) $(files_level_freq_n_proximity)
 files_lang = $(call files_level,$(1)-beginner-) $(call files_level,$(1)-intermediate-) $(call files_level,$(1)-advanced-)
 files_langs = $(foreach lang,$(1),$(call files_lang,$(lang)))
 
 # Functions to build every abc/freq field for each language and levels
 files_level_lang_abc = $(foreach lang,$(1),$(call files_level_abc,$(lang)$(2)))
 files_level_lang_freq = $(foreach lang,$(1),$(call files_level_freq,$(lang)$(2)))
+files_level_lang_freq_n_proximity = $(foreach lang,$(1),$(call files_level_freq_n_proximity,$(lang)$(2)))
 
 files_beginners_abc = $(call files_level_lang_abc,$(1),-beginner-)
 files_beginners_freq = $(call files_level_lang_freq,$(1),-beginner-)
+files_beginners_freq_n_proximity = $(call files_level_lang_freq_n_proximity,$(1),-beginner-)
 files_intermediates_abc = $(call files_level_lang_abc,$(1),-intermediate-)
 files_intermediates_freq = $(call files_level_lang_freq,$(1),-intermediate-)
+files_intermediates_freq_n_proximity = $(call files_level_lang_freq_n_proximity,$(1),-intermediate-)
 files_advanceds_abc = $(call files_level_lang_abc,$(1),-advanced-)
 files_advanceds_freq = $(call files_level_lang_freq,$(1),-advanced-)
+files_advanceds_freq_n_proximity = $(call files_level_lang_freq_n_proximity,$(1),-advanced-)
 
 lang_level := $(foreach lang,$(langs),$(lang)-beginner $(lang)-intermediate $(lang)-advanced)
 
@@ -82,15 +88,18 @@ lang_level := $(foreach lang,$(langs),$(lang)-beginner $(lang)-intermediate $(la
 
 beginnersPDF_abc := $(call files_beginners_abc,$(langs))
 beginnersPDF_freq := $(call files_beginners_freq,$(langs))
-beginnersPDF := $(beginnersPDF_abc) $(beginnersPDF_freq)
+beginnersPDF_freq_n_proximity := $(call files_beginners_freq_n_proximity,$(langs))
+beginnersPDF := $(beginnersPDF_abc) $(beginnersPDF_freq) $(beginnersPDF_freq_n_proximity)
 
 intermediatesPDF_abc := $(call files_intermediates_abc,$(langs))
 intermediatesPDF_freq := $(call files_intermediates_freq,$(langs))
-intermediatesPDF := $(intermediatesPDF_abc) $(intermediatesPDF_freq)
+intermediatesPDF_freq_n_proximity := $(call files_intermediates_freq_n_proximity,$(langs))
+intermediatesPDF := $(intermediatesPDF_abc) $(intermediatesPDF_freq) $(intermediatesPDF_freq_n_proximity)
 
 advancedsPDF_abc := $(call files_advanceds_abc,$(langs))
 advancedsPDF_freq := $(call files_advanceds_freq,$(langs))
-advancedsPDF := $(advancedsPDF_abc) $(advancedsPDF_freq)
+advancedsPDF_freq_n_proximity := $(call files_advanceds_freq_n_proximity,$(langs))
+advancedsPDF := $(advancedsPDF_abc) $(advancedsPDF_freq) $(advancedsPDF_freq_n_proximity)
 
 RU-FR-%: transfield := transFr
 RU-EN-%: transfield := transEn
@@ -134,12 +143,15 @@ advanced: dir $(advancedsPDF)
 
 $(beginnersPDF_abc):: $(addprefix $(cefr_dir)/,beginner-abc_order.csv)
 $(beginnersPDF_freq):: $(addprefix $(cefr_dir)/,beginner-freq_order.csv)
+$(beginnersPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_proximity_order.csv)
 
 $(intermediatesPDF_abc):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
 $(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
+$(intermediatesPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_proximity_order.csv)
 
 $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
+$(advancedsPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_proximity_order.csv)
 
 %.pdf:
 	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr),$(level),$(version))
@@ -153,6 +165,8 @@ $(addprefix $(cefr_dir)/,%-abc_order.csv): $(russian_verbs_c)
 $(addprefix $(cefr_dir)/,%-freq_order.csv): $(russian_verbs_c)
 	$(call extract_csv,$($(*F)),freq,$@)
 
+$(addprefix $(cefr_dir)/,%-freq_n_proximity_order.csv): $(russian_verbs_c)
+	$(call extract_csv,$($(*F)),freq_n_proximity,$@)
 
 # Other rules
 
