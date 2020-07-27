@@ -3,8 +3,8 @@ import csv
 #from RussianWordsClusters import cluster.RussianWordsPairsClusters as rwc
 #from RussianWordsClusters import cluster.Relation
 #import RussianWordsClusters
-from dev.cluster import RussianWordsPairsClusters as rwc
-from dev.cluster import Relation
+from russianwords.clustering import RussianWordsPairsClusters as rwc
+from russianwords.clustering import Relation
 
 colSep = ';'
 transSepBig = ';'
