@@ -147,11 +147,11 @@ $(beginnersPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_prox
 
 $(intermediatesPDF_abc):: $(addprefix $(cefr_dir)/,intermediate-abc_order.csv)
 $(intermediatesPDF_freq):: $(addprefix $(cefr_dir)/,intermediate-freq_order.csv)
-$(intermediatesPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_proximity_order.csv)
+$(intermediatesPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,intermediate-freq_n_proximity_order.csv)
 
 $(advancedsPDF_abc):: $(addprefix $(cefr_dir)/,advanced-abc_order.csv)
 $(advancedsPDF_freq):: $(addprefix $(cefr_dir)/,advanced-freq_order.csv)
-$(advancedsPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,beginner-freq_n_proximity_order.csv)
+$(advancedsPDF_freq_n_proximity):: $(addprefix $(cefr_dir)/,advanced-freq_n_proximity_order.csv)
 
 %.pdf:
 	$(call TEX,$(basename $@),$(fontsizevar),$(numcolumns),$(widthleftcol),$(widthrightcol),$(baselinevar),$(transfield),$(color),$<,$(footer_fr),$(level),$(version))
