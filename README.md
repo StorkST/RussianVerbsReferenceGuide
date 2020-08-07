@@ -1,4 +1,4 @@
-## WIP - Generation of sheets to work on russian verbs vocabulary
+## WIP - Most Common Russian Verbs Reference Guide
 
 Targeted output (more examples in the build/ folder):
 
