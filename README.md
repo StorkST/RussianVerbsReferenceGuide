@@ -1,9 +1,8 @@
 ## WIP - Generation of sheets to work on russian verbs vocabulary
 
-Targeted output (more example in the build/ folder):
+Targeted output (more examples in the build/ folder):
 
-![alt text](https://raw.githubusercontent.com/StorkST/RussianVerbsSheets/master/example-sheet.png "RU/EN intermediate")
-
+![screenshot of example PDF file](https://github.com/StorkST/RussianVerbsSheets/raw/master/example-sheet.png "RU/EN intermediate")
 
 Presentation of the project here: https://storkst.github.io/Russian-Learning-Tools/posts/core-verbs-of-the-russian-language/#what-is-next-need-help
 
