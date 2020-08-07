@@ -1,3 +1,19 @@
+## WIP - Generation of sheets to work on russian verbs vocabulary
+
+Targeted output (more example in the build/ folder):
+
+![alt text](https://raw.githubusercontent.com/StorkST/RussianVerbsSheets/master/example-sheet.png "RU/EN intermediate")
+
+
+Presentation of the project here: https://storkst.github.io/Russian-Learning-Tools/posts/core-verbs-of-the-russian-language/#what-is-next-need-help
+
+Based on work from https://github.com/StorkST/CoreRussianVerbs
+
+
+**Help for translation RU->EN and RU->FR is welcome. If you want to contribute please let me know by email: vchd+ttl@pm.me**
+
+
+### Commands for Xelatex
 650-700 rows RU/FR or RU/EN:
 xelatex -jobname=beginner-ru-fr-abcOrder "\def\csvfilename{cefr/beginner-ru-fr-A1A2B1-abcOrder.csv} \input{tex/a4-4columns.tex}"
 xelatex -jobname=intermediate-ru-fr-abcOrder "\def\csvfilename{cefr/intermediate-ru-fr-B2-abcOrder.csv} \input{tex/a4-4columns.tex}"
@@ -9,4 +25,4 @@ max420 rows RU/FR or RU/EN 25chars RU/16 chars fr - ~70 per row :
 xelatex "\def\csvfilename{build/cefr/advanced-abc_order.csv} \input{a4-3columns.tex}"
 
 TODO:
-  * remove space after comma if enough to keep it on one line (<16 or 17 chars)
+  * remove space after comma if enough to keep it on one line (<16 or 17 chars)?
