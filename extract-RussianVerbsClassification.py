@@ -77,7 +77,7 @@ def genCsv(levels, order, yellowCol, yellowWhen):
                 perf = pairA[1]
                 if perf.endswith(imperf):
                     lenPrefix = len(perf) - len(imperf)
-                    verb = imperf + '/' + perf[0:lenPrefix] + '-'
+                    finalName = imperf + '/' + perf[0:lenPrefix] + '-'
                 currentVerb["finalName"] = finalName.replace("/", "\slash ")
 
             line = currentVerb["finalName"] + colSep + currentVerb["usage"] + colSep + currentVerb["transFr"] + colSep + currentVerb["transEn"]
