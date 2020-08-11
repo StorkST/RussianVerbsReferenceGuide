@@ -22,6 +22,8 @@ def genCsv(levels, order, yellowCol, yellowWhen):
                 pair = row['Пара аспектов']
                 usage = row['Подробности'].split('-')[0]
                 transFR = row['По-французски'].split(transSepBig)[0]
+                if len(transFR) in [19, 20]:
+                    transFR = transFR.replace(", ", ",")
                 transEN = row['По-английски'].split(transSepBig)[0]
                 yellow = None
                 if yellowCol != None:
