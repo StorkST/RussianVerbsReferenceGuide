@@ -261,46 +261,46 @@ verb;usage;transFr;transEn;yellow
 намереваться\slash намериться;;avoir l'intention de;intend;0
 намечать\slash наметить;;planifier, cibler;design, plan;0
 нанимать\slash нанять;;louer;hire;0
-наносить\slash нанести;;apporter une quantité de;drift (on);0
-нападать\slash напасть;;напасть I;attack;1
+наносить\slash нанести;;déposer, causer;pile up, cause;0
+нападать\slash напасть;;attaquer,surmonter;attack, to overcome;1
 напиваться\slash напиться;;étancher sa soif;drink;0
 наполнять\slash наполнить;;remplir;fill;0
 направлять\slash направить;;diriger;direct (at, to);0
 направляться\slash направиться;;se diriger;make;0
-напрягаться\slash напрячься;;faire des efforts;strain / exert oneself;0
-нарастать\slash нарасти;;croître;grow (on);1
-нарезать\slash -;;couper;cut (into pieces);0
-наряжать\slash нарядить;;habiller;dress (up, out);0
-насиловать\slash из-;;violer;violate;0
-наслаждаться\slash насладиться;;jouir de;enjoy;0
+напрягаться\slash напрячься;;s'efforcer;strain / exert oneself;0
+нарастать\slash нарасти;;croître,intensifier;grow (on), build up;1
+наре́зать\slash нареза́ть;;couper, découper;cut (into pieces);0
+наряжать\slash нарядить;;décorer, habiller;decorate, dress (up, out);0
+насиловать\slash из-;;contraindre,violer;coerce, force, rape;0
+наслаждаться\slash насладиться;;profiter, savourer;enjoy, be delighted;0
 наследовать;;hériter de;inherit;0
 настаивать\slash настоять;;insister sur;insist;1
-настраивать\slash настроить;;accorder;tune (up, in);0
-натягивать\slash натянуть;;tendre;stretch;0
+настраивать\slash настроить;;régler, configurer;tune (up, in);0
+натягивать\slash натянуть;;tirer, enfiler;stretch, pull on;0
 находиться\slash найтись;;se retrouver;be found;0
-недооценивать\slash недооценить;;Sous-estimer;underestimate;0
+недооценивать\slash недооценить;;sous-estimer;underestimate;0
 нервировать;;énerver;make smb. nervous;0
 нервничать;;être nerveux;be / feel nervous;1
-нуждаться;;avoir besoin (de, de);be in need / want (of);0
+нуждаться;в;avoir besoin de;be in need of;0
 нырять\slash нырнуть;;plonger;dive;1
 обвинять\slash обвинить;;accuser (de);accuse (of);0
-обдумывать\slash обдумать;;bien méditer;consider;0
-обеспечивать\slash обеспечить;;pourvoir;provide (for, with);0
+обдумывать\slash обдумать;;bien réfléchir;consider, think over;0
+обеспечивать\slash обеспечить;;assurer, fournir;secure, provide;0
 обижать\slash обидеть;;vexer;offend (smb.);0
 обладать;;posséder;possess;1
 обмениваться\slash обменяться;;échanger;take smth. by mistake;0
-обнимать\slash обнять;;serrer dans ses bras;embrace;0
+обнимать\slash обнять;;étreindre;embrace, hug;0
 обновлять\slash обновить;;renouveler;renew;0
 обожать;;adorer;adore;0
 обозначать\slash обозначить;;marquer;denote;0
 оборачиваться\slash обернуться;;se retourner;turn (round);0
 обосновывать\slash обосновать;;argumenter;(give) prove;0
-обосраться;;;;0
+обосраться;;se chier dessus;to shit oneself;0
 образовывать\slash образовать;;organiser;form;0
 образовываться\slash образоваться;;se former;form;0
 обслуживать\slash обслужить;;desservir;serve;0
-обучать\slash обучить;;apprendre à;teach (smb. smth.);0
-обходиться\slash обойтись;;traiter;cost;0
+обучать\slash обучить;;former qqun à;teach (smb. smth.);0
+обходиться\slash обойтись;;coûter,s’en sortir;cost, get by with;0
 объединять\slash объединить;;unifier;unite;0
 объединяться\slash объединиться;;s'unir;join hands (with);0
 объясняться\slash объясниться;;s'expliquer;explain oneself;0
@@ -419,7 +419,7 @@ verb;usage;transFr;transEn;yellow
 предполагаться\slash предположиться;;être prévu,destiné;be intended, presumed;0
 предпочитать\slash предпочесть;;préférer;prefer;0
 предпринимать\slash предпринять;;entreprendre;undertake;0
-предстоять;;;lie ahead;1
+предстоять;;avoir à accomplir;lie ahead;1
 предусматривать\slash предусмотреть;;prévoir;foresee;0
 предчувствовать;;pressentir;have a presentiment/ foreboding (of / about);0
 преобразовывать\slash преобразовать;;réformer;reform;0
