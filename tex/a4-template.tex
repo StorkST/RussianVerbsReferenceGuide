@@ -13,12 +13,12 @@
 \usepackage{multicol}
 \usepackage{fontspec}
 \usepackage{csvsimple}
-\usepackage{adjmulticol}
 \usepackage{url}
 \setmainfont{XCharter}
 \usepackage[table]{xcolor}
 \usepackage{ifthen}
 \pagestyle{empty}
+%\usepackage{lineno}
 
 \newsavebox\ltmcbox
 
@@ -29,7 +29,7 @@
 \renewcommand{\baselinestretch}{\baselinevar}
 
 \begin{document}
-  \begin{adjmulticols}{\numcolumns}{}{}
+  \begin{multicols}{\numcolumns}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
@@ -61,5 +61,5 @@
     \input{\footerfile}
   \end{addmargin}
 
-  \end{adjmulticols}
+  \end{multicols}
 \end{document}
