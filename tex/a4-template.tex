@@ -29,6 +29,14 @@
 
 \renewcommand{\baselinestretch}{\baselinevar}
 
+\newcommand{\newdef}[1]{
+  \marginnote{
+    \setstretch{\baselinevar}
+    \fontsize{\fontsizevar}{\fontsizevar}\fontfamily{XCharter}\selectfont
+    #1
+  }
+}
+
 \begin{document}
 
   \begin{multicols}{\numcolumns}
@@ -37,15 +45,7 @@
   \setlength\marginparwidth{1mm}
   \reversemarginpar
  
-  \newcommand{\newdef}[1]{
-    \marginnote{
-      \setstretch{\baselinevar}
-      \fontsize{\fontsizevar}{\fontsizevar}\fontfamily{XCharter}\selectfont
-      #1
-    }
-  }
   \newdef{1\\ 2\\}
-
 
   \ifthenelse{\equal{\withyellow}{yes}}{
     \csvstyle{myStyle}{
