@@ -20,6 +20,7 @@
 \pagestyle{empty}
 \usepackage{marginnote}
 \usepackage{setspace}
+\usepackage{forloop}
 
 \usepackage{scrlayer-scrpage}
 \usepackage{scrlayer-notecolumn}
@@ -32,82 +33,25 @@
 
 \renewcommand{\baselinestretch}{\baselinevar}
 
-\setkomafont{notecolumn.marginpar}{\KOMAoptions{fontsize=\fontsizevar}\setstretch{\baselinevar}\fontfamily{XCharter}\selectfont\raggedleft\itshape}
+\setkomafont{notecolumn.marginpar}{\KOMAoptions{fontsize=\fontsizevar}\setstretch{\baselinevar}\fontfamily{XCharter}\selectfont\raggedleft}
 
 \newcommand{\newdef}[1]{
-  \reversemarginpar
-  \setlength\marginparwidth{4mm}
-  \marginnote{
-      #1
-  }
-}
-
-\begin{document}
   \reversemarginpar
   \setlength\marginparwidth{4mm}
   \setlength\marginparsep{2mm}
   \makenote{
     1\\
+    \vspace{\baselineskip}
+    #1
+  }
+}
+
+\begin{document}
+  %\reversemarginpar
+  %\setlength\marginparwidth{4mm}
+  %\setlength\marginparsep{2mm}
+  \newdef{
     1\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    \vspace{\baselineskip}
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
-    100\\
   }
   %\newdef{1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2 \\1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\  2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ }
   \begin{multicols}{4}
