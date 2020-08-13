@@ -38,13 +38,24 @@
 \setkomafont{notecolumn.marginpar}{\KOMAoptions{fontsize=\fontsizevar}\setstretch{\baselinevar}\fontfamily{XCharter}\selectfont\raggedleft}
 
 \newcommand{\marginlineno}{
+  % Calc num lines to set numbers for
+  \def\i{616}
+  \def\j{\numcolumns}
+  % The next thing we have to do is convert \x and \y 
+  % (which TeX views as merely the characters 3 and 0, 1 and 0, 
+  % not as the decimal numbers 30 and 10) into count values
+  \newcount\a\a=\number\i
+  \newcount\b\b=\number\j
+  \divide\a by\b
+  \def\i{\the\a}
+
   \reversemarginpar
   \setlength\marginparwidth{4mm}
   \setlength\marginparsep{1.5mm}
   \makenote*{
     \noindent 1\\
     \newcounter{x}
-    \forloop{x}{2}{\value{x}<100}{
+    \forloop{x}{2}{\value{x}<176}{
       \ifthenelse{\equal{\intcalcMod{\value{x}}{5}}{0}}{
         \noindent \arabic{x}\\
       }{
@@ -57,7 +68,7 @@
 \begin{document}
   \marginlineno
 
-  \begin{multicols}{4}
+  \begin{multicols}{\numcolumns}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
 
