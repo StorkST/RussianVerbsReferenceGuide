@@ -21,6 +21,8 @@
 \usepackage{marginnote}
 \usepackage{setspace}
 \usepackage{forloop}
+\usepackage{intcalc}
+\usepackage{ifthen}
 
 \usepackage{scrlayer-scrpage}
 \usepackage{scrlayer-notecolumn}
@@ -40,12 +42,14 @@
   \setlength\marginparwidth{4mm}
   \setlength\marginparsep{2mm}
   \makenote*{
-    1\\
-    \vspace{\baselineskip}
-    #1
+    \noindent 1\\
     \newcounter{x}
-    \forloop{x}{0}{\value{x}<100}{
-      \noindent \arabic{x}\\
+    \forloop{x}{2}{\value{x}<100}{
+      \ifthenelse{\equal{\intcalcMod{\value{x}}{5}}{0}}{
+        \noindent \arabic{x}\\
+      }{
+        \vspace{\baselineskip}
+      }
     }
   }
 }
