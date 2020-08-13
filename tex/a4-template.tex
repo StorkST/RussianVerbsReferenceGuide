@@ -39,10 +39,14 @@
   \reversemarginpar
   \setlength\marginparwidth{4mm}
   \setlength\marginparsep{2mm}
-  \makenote{
+  \makenote*{
     1\\
     \vspace{\baselineskip}
     #1
+    \newcounter{x}
+    \forloop{x}{0}{\value{x}<100}{
+      \noindent \arabic{x}\\
+    }
   }
 }
 
