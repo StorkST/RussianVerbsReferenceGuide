@@ -2,7 +2,7 @@
 \usepackage[
     a4paper,
     total={200mm,281mm},
-    left=5mm,
+    left=10mm,
     right=5mm,
     top=8mm,
     bottom=8mm
@@ -30,22 +30,28 @@
 \renewcommand{\baselinestretch}{\baselinevar}
 
 \newcommand{\newdef}[1]{
+  \reversemarginpar
+  \setlength\marginparwidth{2mm}
   \marginnote{
-    \setstretch{\baselinevar}
     \fontsize{\fontsizevar}{\fontsizevar}\fontfamily{XCharter}\selectfont
-    #1
+    \setstretch{\baselinevar}
+    %\setbox\ltmcbox\vbox{
+      #1
+     % \unskip
+     %\unpenalty
+     %\unpenalty
+    %}
+    %\unvbox\ltmcbox
   }
 }
 
 \begin{document}
 
+  \newdef{1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2 \\1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ }
   \begin{multicols}{\numcolumns}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
-  \setlength\marginparwidth{1mm}
-  \reversemarginpar
  
-  \newdef{1\\ 2\\}
 
   \ifthenelse{\equal{\withyellow}{yes}}{
     \csvstyle{myStyle}{
