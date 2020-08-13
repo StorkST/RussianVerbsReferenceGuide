@@ -37,10 +37,10 @@
 
 \setkomafont{notecolumn.marginpar}{\KOMAoptions{fontsize=\fontsizevar}\setstretch{\baselinevar}\fontfamily{XCharter}\selectfont\raggedleft}
 
-\newcommand{\newdef}[1]{
+\newcommand{\marginlineno}{
   \reversemarginpar
   \setlength\marginparwidth{4mm}
-  \setlength\marginparsep{2mm}
+  \setlength\marginparsep{1.5mm}
   \makenote*{
     \noindent 1\\
     \newcounter{x}
@@ -55,13 +55,8 @@
 }
 
 \begin{document}
-  %\reversemarginpar
-  %\setlength\marginparwidth{4mm}
-  %\setlength\marginparsep{2mm}
-  \newdef{
-    1\\
-  }
-  %\newdef{1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2 \\1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\  2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ 1\\ 2\\ 3\\ }
+  \marginlineno
+
   \begin{multicols}{4}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
