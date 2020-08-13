@@ -18,7 +18,8 @@
 \usepackage[table]{xcolor}
 \usepackage{ifthen}
 \pagestyle{empty}
-%\usepackage{lineno}
+\usepackage{marginnote}
+\usepackage{setspace}
 
 \newsavebox\ltmcbox
 
@@ -29,9 +30,22 @@
 \renewcommand{\baselinestretch}{\baselinevar}
 
 \begin{document}
+
   \begin{multicols}{\numcolumns}
   \setbox\ltmcbox\vbox{
   \makeatletter\col@number\@ne
+  \setlength\marginparwidth{1mm}
+  \reversemarginpar
+ 
+  \newcommand{\newdef}[1]{
+    \marginnote{
+      \setstretch{\baselinevar}
+      \fontsize{\fontsizevar}{\fontsizevar}\fontfamily{XCharter}\selectfont
+      #1
+    }
+  }
+  \newdef{1\\ 2\\}
+
 
   \ifthenelse{\equal{\withyellow}{yes}}{
     \csvstyle{myStyle}{
