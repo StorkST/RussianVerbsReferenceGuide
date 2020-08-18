@@ -10,7 +10,7 @@ verb;usage;transFr;transEn;yellow
 действовать\slash по-;;agir;act;1
 состоять;;être;consist (in);1
 возникать\slash возникнуть;;surgir;arise;1
-оказываться\slash оказаться;;se trouver;turn out (to be);0
+оказываться\slash оказаться;;s’avérer;turn out (to be);0
 появляться\slash появиться;;sembler;appear;0
 обладать;;posséder;possess;1
 наблюдать\slash по-;;observer,surveiller;watch, observe;0
@@ -43,7 +43,7 @@ verb;usage;transFr;transEn;yellow
 пользоваться\slash вос-;;profiter de;avail oneself (of);0
 удаваться\slash удаться;;réussir;turn out well;0
 рассчитывать\slash рассчитать;;calculer;calculate;1
-оказывать\slash оказать;;montrer;show;0
+оказывать\slash оказать;;montrer, faire preuve de;show, display;0
 находиться\slash найтись;;se retrouver;be found;0
 достигать\slash достигнуть;;atteindre;reach;0
 защищать\slash защитить;;défendre;defend (from, against);0
@@ -72,7 +72,7 @@ verb;usage;transFr;transEn;yellow
 приобретать\slash приобрести;;acquérir;acquire;0
 проявлять\slash проявить;;manifester;show;0
 окружать\slash окружить;;entourer;surround;0
-отражать\slash отразить;;réfléchir;repel;0
+отражать\slash отразить;;exprimer, refléter;repel, reflect;0
 лезть\slash по-;;grimper;climb (up, on to);1
 доверять\slash доверить;;confier;entrust (to);0
 вступать\slash вступить;;entrer;enter;1
@@ -81,7 +81,7 @@ verb;usage;transFr;transEn;yellow
 превышать\slash превысить;;surpasser en;exceed;0
 исполнять\slash исполнить;;accomplir;carry out, fulfill;0
 подтверждать\slash подтвердить;;affirmer;confirm;0
-отправляться\slash отправиться;;aller (à);go (to a place);0
+отправляться\slash отправиться;;aller à,partir pour;go (to a place), set off;0
 содержаться\slash содержать;;être;contain;0
 вести\slash по-;;mener;move;0
 заявлять\slash заявить;;déclarer;declare;0
@@ -102,7 +102,7 @@ verb;usage;transFr;transEn;yellow
 изменять\slash изменить;;changer;change;1
 преследовать;;poursuivre;pursue;0
 посещать\slash посетить;;visiter;visit;0
-орать;;crier;yell;0
+орать\slash за-;;hurler;yell, scream;0
 демонстрировать;;manifester;demonstrate;0
 грозить\slash при-;;menacer, gronder;threaten, scold;0
 тянуться\slash по-;;s’étirer;to reach;0
@@ -144,7 +144,7 @@ verb;usage;transFr;transEn;yellow
 бросаться\slash броситься;;se précipiter;dash;0
 придерживаться\slash придержаться;;se tenir à;hold (to);0
 признаваться\slash признаться;;avouer;confess (to);0
-отрезать\slash -;;couper;cut off;0
+отре́зать\slash отреза́ть;;sectionner qqch;cut off, snip off;0
 подлежать;;être sujet à;be subject (to);1
 считать\slash счесть;;compter;count;1
 наслаждаться\slash насладиться;;profiter, savourer;enjoy, be delighted;0
@@ -188,13 +188,13 @@ verb;usage;transFr;transEn;yellow
 стесняться\slash по-;;se gêner;feel / be shy / self-conscious / embarrassed;0
 наносить\slash нанести;;déposer, causer;pile up, cause;0
 сверкать\slash сверкнуть;;étinceler;sparkle;1
-отпускать\slash отпустить;;permettre à de s'en aller;let go;0
+отпускать\slash отпустить;;relâcher;let go;0
 вкладывать\slash вложить;;mettre, contribuer;put in, contribute;0
 зафиксировать;;fixer;fix;0
 радовать\slash об-;;réjouir;gladden;0
 чувствоваться\slash перечувствовать;;ressentir;be felt;0
 уничтожать\slash уничтожить;;détruire;destroy;0
-ознакомляться\slash ознакомиться;;se mettre au courant de;familiarize oneself (with);0
+ознакомляться\slash ознакомиться;;prendre connaissance;get to know;0
 рваться\slash рвать;;se déchirer;break;0
 обходиться\slash обойтись;;coûter,s’en sortir;cost, get by with;0
 годиться;;convenir;be fit (for);0
@@ -211,7 +211,7 @@ verb;usage;transFr;transEn;yellow
 справляться\slash справиться;;venir à bout de;inquire (after, about);0
 обозначать\slash обозначить;;marquer;denote;0
 болтать\slash вз-;;agiter;shake up;0
-отражаться\slash отразиться;;se refléter;be reflected;0
+отражаться\slash отразиться;;avoir des effets;have impacts on;0
 регулировать;;régler;regulate;0
 раскрывать\slash раскрыть;;ouvrir;open;0
 издавать\slash издать;;éditer;publish;0
@@ -223,14 +223,14 @@ verb;usage;transFr;transEn;yellow
 сгорать\slash сгореть;;être brûlé;burn down / out;1
 качать\slash качнуть;;balancer;rock;0
 обнимать\slash обнять;;étreindre;embrace, hug;0
-освещать\slash осветить;;éclairer;light (up);0
+освещать\slash осветить;;éclairer,souligner;light (up);0
 удовлетворять\slash удовлетворить;;satisfaire;satisfy;0
 сдерживать\slash сдержать;;retenir;hold in;0
 писаться\slash на-;;s'érire;spell;0
 стимулировать;;stimuler;stimulate;0
 опускать\slash опустить;;baisser;lower;0
 нападать\slash напасть;;attaquer,surmonter;attack, to overcome;1
-относиться\slash отнестись;;traiter;treat;0
+относиться\slash отнестись;;traiter,considérer;treat, concern;0
 сжимать\slash сжать;;сжать I;(com)press;0
 превосходить\slash превзойти;;surpasser;excel (in);0
 протягивать\slash протянуть;;tendre;stretch;0
@@ -325,7 +325,7 @@ verb;usage;transFr;transEn;yellow
 базироваться\slash базировать;;se fonder sur;rest (on, upon);0
 выбираться\slash выбраться;;sortir, se tirer;get out;0
 приказывать\slash приказать;;ordonner;order (to);0
-откладывать\slash отложить;;mettre de côté;lay / put / set aside;0
+откладывать\slash отложить;;mettre de côté;put / set aside;0
 лгать\slash со-;;mentir;lie;1
 расширять\slash расширить;;élargir;widen;0
 гибнуть\slash по-;;périr;perish;1
@@ -335,7 +335,7 @@ verb;usage;transFr;transEn;yellow
 погибать\slash погибнуть;;périr;perish;1
 рубить\slash на-;;abattre;chop;0
 тонуть\slash у-;;se noyer;sink;1
-отвлекать\slash отвлечь;;détourner;divert;0
+отвлекать\slash отвлечь;;détourner;divert, distract;0
 адресовать;;adresser;address;0
 жрать\slash со-;;dévorer;devour;0
 литься\slash по-;;couler, fuiter;flow;0
@@ -346,7 +346,7 @@ verb;usage;transFr;transEn;yellow
 наказывать\slash наказать;;punir;punish;0
 воспроизводить\slash воспроизвести;;répéter, rejouer;reproduce, replay;0
 привязывать\slash привязать;;attacher;tie (to);0
-отзываться\slash отозваться;;répondre à;respond (to);0
+отзываться\slash отозваться;;répondre à, parler;respond (to), speak of;0
 приступать\slash приступить;;se mettre à;set about;1
 задерживаться\slash задержаться;;être retenu;stay too long;0
 сожалеть;;regretter;pity (smb.);1
@@ -638,7 +638,7 @@ verb;usage;transFr;transEn;yellow
 гармонировать;;s'harmoniser;harmonize;1
 зачислять\slash зачислить;;inscrire, engager;enroll, enlist;0
 флиртовать;;flirter;flirt (with);1
-оповещать\slash оповестить;;informer;notify;0
+оповещать\slash оповестить;;informer, notifier;notify, inform;0
 охрипнуть;;être enroué;become hoarse;1
 запаздывать\slash запоздать;;être en retard;be late (for);1
 преобразовывать\slash преобразовать;;réformer;reform;0
@@ -665,7 +665,7 @@ verb;usage;transFr;transEn;yellow
 опознавать\slash опознать;;identifier;identify;0
 изнашиваться\slash износиться;;être usé;wear out;0
 наряжать\slash нарядить;;décorer, habiller;decorate, dress (up, out);0
-обосраться;;se chier dessus;to shit oneself;0
+обсираться\slash обосраться;;se chier dessus;to shit oneself;0
 помечать\slash пометить;;marquer;mark;0
 наедаться\slash наесться;;être rassasié;eat one's fill;0
 укорачивать\slash укоротить;;raccourcir;shorten;0
