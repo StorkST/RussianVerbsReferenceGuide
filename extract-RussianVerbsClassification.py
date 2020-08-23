@@ -1,5 +1,6 @@
 import argparse
 import csv
+import sys
 from russianwords.clustering import RussianWordsPairsClusters as rwc
 from russianwords.clustering import Relation
 
@@ -13,18 +14,26 @@ def genCsv(levels, order, yellowCol, yellowWhen):
 
         allVerbsOrder = []
         allVerbs = {}
+        nVerbsExported = 0
 
         # Build an initial array of verbs
         for row in reader:
+                infinitive = row['Инфинитив']
+
+                filterVal = row['Скрытый1-unwantedToExport']
+                if filterVal in ["x", "X"]:
+                    sys.stderr.write("ignoring verb unwantedToExport: " + infinitive + "\n")
+                    continue
+
                 verbRank = row['Ранг ГЛ']
                 lvl = row['Уровень']
-                infinitive = row['Инфинитив']
                 pair = row['Пара аспектов']
                 usage = row['Подробности'].split('-')[0]
                 transFR = row['По-французски'].split(transSepBig)[0]
                 if len(transFR) in [19, 20]:
                     transFR = transFR.replace(", ", ",")
                 transEN = row['По-английски'].split(transSepBig)[0]
+
                 yellow = None
                 if yellowCol != None:
                     yellow = row[yellowCol]
@@ -32,6 +41,7 @@ def genCsv(levels, order, yellowCol, yellowWhen):
                 # name of verb is the verb pair if available, else a single verb
                 if lvl in levels:
                     if verbRank != "10000":
+                        nVerbsExported = nVerbsExported + 1
                         verb = infinitive
                         # Fetch pair if available
                         if pair != "":
@@ -39,6 +49,9 @@ def genCsv(levels, order, yellowCol, yellowWhen):
 
                         if verb not in allVerbsOrder:
                             allVerbsOrder.append(verb)
+                        else:
+                            sys.stderr.write("WARN-2 ranked verbs in a pair: " + verb + " already met\n")
+
                         allVerbs[verb] = {
                                 "finalName": verb,
                                 "usage": usage,
@@ -86,6 +99,8 @@ def genCsv(levels, order, yellowCol, yellowWhen):
                 yellowVal = 1 if currentVerb["yellow"] == yellowWhen else 0
                 line += str(yellowVal)
             print(line)
+
+        sys.stderr.write(str(nVerbsExported) + " verbs exported\n")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fiters and Extractions on RussianVerbsClassification.csv')

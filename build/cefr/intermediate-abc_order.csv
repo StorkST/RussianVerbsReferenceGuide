@@ -512,9 +512,7 @@ verb;usage;transFr;transEn;yellow
 расспрашивать\slash расспросить;;poser des questions;ask questions;0
 расставаться\slash расстаться;;se séparer;part with;0
 расстраивать\slash расстроить;;déranger;disorder;0
-расстреливать\slash расстрелять;;fusiller;shoot;0
 рассуждать;;raisonner;argue;1
-рассчитывать\slash рассчитать;;calculer;calculate;1
 рассчитываться\slash рассчитаться;;régler ses comptes;settle accounts;0
 рассыпаться\slash рассыпать;;se répandre (poudre, idées);crumble, spill;0
 растворять\slash растворить;;dissoudre;dissolve;0
@@ -526,7 +524,6 @@ verb;usage;transFr;transEn;yellow
 рваться\slash рвать;;se déchirer, aspirer à;break, strive for;0
 реагировать\slash от-;;réagir;react (to, upon);1
 реализовывать\slash реализовать;;réaliser;incarnate;0
-реализовываться;;se réaliser;realize;0
 регистрировать\slash за-;;enregistrer;register;0
 регулировать\slash *;;réguler;regulate;0
 редактировать\slash от-;;éditer (rédiger);edit;0
@@ -559,7 +556,6 @@ verb;usage;transFr;transEn;yellow
 слушаться\slash по-;;obéir à;obey;0
 смущать\slash смутить;;troubler;embarrass;0
 снижать\slash снизить;;réduire;lower;0
-снижаться\slash снизиться;;baisser;descend;0
 сниться\slash при-;;rêver;dream;0
 сносить\slash снести;;user;fetch down;0
 собираться\slash собраться;;se rassembler;gather;0
@@ -570,7 +566,6 @@ verb;usage;transFr;transEn;yellow
 совпадать\slash совпасть;;coïncider;coincide (with);1
 содействовать\slash по-;;encourager;encourage;1
 содержать;;contenir,maintenir;contain, maintain;0
-содержаться;;se trouver;contain;0
 сожалеть;;regretter;pity (smb.);1
 создаваться\slash создаться;;se former;be created;0
 сообщаться\slash сообщиться;;être communiqué;be communicated;0
@@ -597,7 +592,6 @@ verb;usage;transFr;transEn;yellow
 стимулировать;;stimuler;stimulate;0
 стонать\slash про-;;gémir;groan;1
 страдать\slash по-;;souffrir;suffer (for a little);1
-стрелять\slash выстрелить;;faire feu;shoot (at);1
 стремиться\slash у-;;aspirer à;speed;0
 судить;;juger;try;0
 суммировать;;faire le total, résumer;sum up;0
@@ -618,13 +612,11 @@ verb;usage;transFr;transEn;yellow
 тушить\slash по-;;éteindre;put out;0
 тянуться\slash по-;;s’étirer;to reach;0
 убеждать\slash убедить;;convaincre de;convince (of);0
-убеждаться\slash убедиться;;se convaincre de;make sure / certain (of, that);0
 увлекать\slash увлечь;;captiver;captivate;0
 увольняться\slash уволиться;;démissionner;leave the service;0
 угрожать;;menacer;threaten (with);0
 удаваться\slash удаться;;réussir;turn out well;0
 удалять\slash удалить;;retirer;move off;0
-удаляться\slash удалиться;;se retirer;move off / away (from);0
 удваивать\slash удвоить;;porter au double;double;0
 удерживать\slash удержать;;retenir;retain;0
 удерживаться\slash удержаться;;se retenir;hold one's ground;0
@@ -670,5 +662,5 @@ verb;usage;transFr;transEn;yellow
 чувствоваться\slash по-;;ressentir;be felt;0
 шептать\slash про-;;chuchoter;whisper;0
 шокировать;;choquer;horrify;0
-щёлкать\slash щёлкнуть;;faire claquer, cloiquer;click;0
+щёлкать\slash щёлкнуть;;claquer, cliquer;click;0
 экспортировать;;exporter;export;0
