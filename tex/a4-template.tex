@@ -23,8 +23,8 @@
 \newsavebox\ltmcbox
 
 \setlength{\columnsep}{0mm} % adjust spacing between columns
-\setlength{\columnseprule}{0.1pt} % width of drawn line between columns
-\setlength\tabcolsep{0.5mm} % spacing in table: between Russian verbs and translation
+\setlength{\columnseprule}{0.01pt} % width of drawn line between columns
+\setlength\tabcolsep{0.1mm} % spacing in table: between Russian verbs and translation
 
 \renewcommand{\baselinestretch}{\baselinevar}
 
@@ -35,7 +35,7 @@
 
   \ifthenelse{\equal{\withyellow}{yes}}{
     \csvstyle{myStyle}{
-      longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
+      longtable=p{\widthleftcol}>{\small\raggedright\arraybackslash}p{\widthrightcol},
       separator=semicolon,
       % Dirty fix to set colored rows. Doing a different way brought linebreaks for every colored row.
       % Bug: 1st row doesn't get colored even when it should be
@@ -43,7 +43,7 @@
     }
   }{
     \csvstyle{myStyle}{
-      longtable=p{\widthleftcol}>{\small}p{\widthrightcol},
+      longtable=p{\widthleftcol}>{\small\raggedright\arraybackslash}p{\widthrightcol},
       separator=semicolon
     }
   }
