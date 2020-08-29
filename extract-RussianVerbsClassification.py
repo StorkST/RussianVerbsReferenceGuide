@@ -52,15 +52,25 @@ def genCsv(levels, order, yellowCol, yellowWhen):
                         else:
                             sys.stderr.write("WARN-2 ranked verbs in a pair: " + verb + " already met\n")
 
-                        allVerbs[verb] = {
-                                "finalName": verb,
-                                "usage": usage,
-                                "transFr": transFR,
-                                "transEn": transEN,
-                                "yellow": yellow
-                            }
+                        if yellow != None:
+                            allVerbs[verb] = {
+                                    "finalName": verb,
+                                    "usage": usage,
+                                    "transFr": transFR,
+                                    "transEn": transEN,
+                                    "yellow": yellow
+                                }
+                        else:
+                            allVerbs[verb] = {
+                                    "finalName": verb,
+                                    "usage": usage,
+                                    "transFr": transFR,
+                                    "transEn": transEN
+                                }
 
         newVerbsKeys = []
+        if order == 'none':
+            newVerbsKeys = allVerbs.keys()
         if order == 'abc':
             allVerbsKeys = allVerbs.keys()
             newVerbsKeys = sorted(allVerbsKeys)
@@ -106,13 +116,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fiters and Extractions on RussianVerbsClassification.csv')
     parser.add_argument('-l', '--cefr-levels', dest='levels', required=True, nargs='+', help='')
     parser.add_argument('-y', '--yellow', dest='yellow', nargs=2, default=None, help='2 strings: the first is the name of the field to use in a new yellow column, the second is the value of the field used to set the yellow field to 1 (else it equals 0)')
-    parser.add_argument('-o', '--order', dest='order', nargs='?', choices=['abc', 'abc_n_proximity', 'freq', 'freq_n_proximity'], default='freq', help='order to classify data, either by frequency order or by alphabetical order')
+    parser.add_argument('-o', '--order', dest='order', nargs='?', choices=['none', 'abc', 'abc_n_proximity', 'freq', 'freq_n_proximity'], default='freq', help='order to classify data, either by frequency order or by alphabetical order')
     args = parser.parse_args()
 
     levels = args.levels
     order = args.order
-    yellowCol = args.yellow[0]
-    yellowWhen = args.yellow[1]
+
+    yellowCol = None
+    yellowWhen = None
+    if args.yellow != None and len(args.yellow) == 2:
+        yellowCol = args.yellow[0]
+        yellowWhen = args.yellow[1]
 
     columnsName = ""
     columnsNameA = ["verb", "usage", "transFr", "transEn"]
