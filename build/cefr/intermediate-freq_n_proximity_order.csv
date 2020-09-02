@@ -1,25 +1,24 @@
 verb;usage;transFr;transEn;yellow
 казаться\slash по-;;paraître;seem;0
 оказываться\slash оказаться;;s’avérer;turn out (to be);0
-оказывать\slash оказать;;montrer, faire preuve de;show, display;0
+оказывать\slash оказать;;montrer, apporter une aide;show, display;0
 доказывать\slash доказать;;prouver;prove;0
 приказывать\slash приказать;;ordonner;order (to);0
 наказывать\slash наказать;;punir;punish;0
-показываться\slash показаться;;se montrer;appear;0
-существовать\slash про-;;exister;exist;1
+существовать\slash про-;;exister / subsister;exist;1
 пытаться\slash по-;;tenter;try;0
 позволять\slash позволить;;permettre;allow (to);0
 требовать\slash по-;;exiger;demand (of, from);0
 собираться\slash собраться;;se rassembler;gather;0
 разбираться\slash разобраться;;comprendre, résoudre;sort out;0
-набирать\slash набрать;;ramasser;gather;0
+набирать\slash набрать;;saisir, recruter;gather;0
 подбирать\slash подобрать;;choisir, ramasser;pick up, select;0
 разбирать\slash разобрать;;démonter, démêler;strip (object, idea);0
 выбираться\slash выбраться;;se / s’en sortir;get out;0
 отбирать\slash отобрать;;enlever;take away / off / from;0
 забираться\slash забраться;;grimper, pénétrer;climb up, crawl;0
 приходиться\slash прийтись;;convenir;suit;1
-исходить\slash изойти;;parcourir;go / walk / stroll all over;1
+исходить\slash изойти;;venir de;come from;1
 находиться\slash найтись;;se trouver;be found;0
 обходиться\slash обойтись;;coûter, traiter qqun d’une façon;cost, get by with;0
 касаться\slash коснуться;;toucher, concerner;touch, refer to;0
@@ -27,7 +26,7 @@ verb;usage;transFr;transEn;yellow
 воздействовать;;influencer;influence;1
 содействовать\slash по-;;encourager;encourage;1
 состоять;;consister (en);consist (in);1
-предстоять;;avoir à accomplir;lie ahead;1
+предстоять;;rester à venir;lie ahead;1
 настаивать\slash настоять;;insister sur;insist;1
 возникать\slash возникнуть;;surgir;arise;1
 появляться\slash появиться;;apparaître;appear;0
@@ -90,7 +89,7 @@ verb;usage;transFr;transEn;yellow
 рассчитываться\slash рассчитаться;;régler ses comptes;settle accounts;0
 меняться\slash по-;;changer;change;0
 изменять\slash изменить;;modifier;modify;1
-обмениваться\slash обменяться;;échanger;take smth. by mistake;0
+обмениваться\slash обменяться;;s’échanger;take smth. by mistake;0
 проводиться\slash провестись;;s’être passé;happen, have the occasion;0
 вести\slash по-;;mener;move;0
 сопровождать\slash сопроводить;;accompagner;accompany;0
@@ -175,7 +174,7 @@ verb;usage;transFr;transEn;yellow
 отражаться\slash отразиться;;avoir des effets;have impacts on;0
 подражать;;imiter;imitate;1
 заражать\slash заразить;;communiquer à;infect;0
-лезть\slash по-;;grimper;climb (up, on to);1
+лезть\slash по-;;grimper, s’introduire, chercher dans;climb (up, on to);1
 влезать\slash влезть;;grimper;climb in(to);1
 залезать\slash залезть;;monter, rentrer;climb up, get into;1
 доверять\slash доверить;;confier;entrust (to);0
