@@ -23,5 +23,8 @@ xelatex "\def\csvfilename{} \input{a4-4columns-colored.tex}"
 max420 rows RU/FR or RU/EN 25chars RU/16 chars fr - ~70 per row :
 xelatex "\def\csvfilename{build/cefr/advanced-abc_order.csv} \input{a4-3columns.tex}"
 
+### Update release on Github with custom labels
+hub release edit vBeta-1.0 -m "Référentiel des verbes russes de niveau intermédiaire en deux versions: classé par ordre alphabétique, classé par fréquence dans la langue" -a "build/RU-FR-intermediate-abc_order.pdf#RU-FR intermédiaire - abc" -a "build/RU-FR-intermediate-freq_n_proximity_order.pdf#RU-FR intermédiaire - fréquence"
+
 TODO:
   * remove space after comma if enough to keep it on one line (<16 or 17 chars)?
