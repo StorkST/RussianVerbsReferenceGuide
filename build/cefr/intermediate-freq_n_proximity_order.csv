@@ -43,13 +43,12 @@ verb;usage;transFr;transEn;yellow
 нанимать\slash нанять;;louer;hire;0
 вонять\slash за-;;puer;stink (of);1
 стремиться\slash у-;;aspirer à;speed;0
-поддерживать\slash поддержать;;retenir;support;0
+поддерживать\slash поддержать;;soutenir;support;0
 содержать;;contenir, maintenir;contain, maintain;0
 придерживаться\slash придержаться;;se tenir à;hold (to);0
-удерживать\slash удержать;;retenir;retain;0
-сдерживать\slash сдержать;;retenir;hold in;0
+удерживать\slash удержать;;garder, retenir qqch ou qqun;retain;0
+сдерживать\slash сдержать;;contenir, réprimer;hold in;0
 выдерживать\slash выдержать;;résister aux difficultés;stand against difficulties;0
-задерживаться\slash задержаться;;être retenu;stay too long;0
 задерживать\slash задержать;;détenir, retarder;detain;0
 воздерживаться\slash воздержаться;;s'abstenir de;refrain (from);0
 рассматривать\slash рассмотреть;;envisager;examine;0
@@ -175,8 +174,7 @@ verb;usage;transFr;transEn;yellow
 подражать;;imiter;imitate;1
 заражать\slash заразить;;communiquer à;infect;0
 лезть\slash по-;;grimper, s’introduire, chercher dans;climb (up, on to);1
-влезать\slash влезть;;grimper;climb in(to);1
-залезать\slash залезть;;monter, rentrer;climb up, get into;1
+влезать\slash влезть;;grimper, rentrer dans;climb in(to);1
 доверять\slash доверить;;confier;entrust (to);0
 заверять\slash заверить;;assurer, certifier;assure, certify;0
 заваривать\slash заварить;;infuser;boil, make trouble;0
@@ -220,8 +218,8 @@ verb;usage;transFr;transEn;yellow
 натягивать\slash натянуть;;tirer, enfiler;stretch, pull on;0
 руководить;;diriger;lead;0
 связывать\slash связать;;lier;tie together;0
-привязывать\slash привязать;;attacher;tie (to);0
-вязать\slash с-;;attacher, tricoter;bind, knit;0
+привязывать\slash привязать;;attacher à;tie (to);0
+вязать\slash с-;;lier, tricoter;bind, knit;0
 комментировать\slash про-;;commenter;comment (on, upon);0
 рисковать\slash рискнуть;;risquer;run risks;1
 страдать\slash по-;;souffrir;suffer (for a little);1
@@ -282,8 +280,8 @@ verb;usage;transFr;transEn;yellow
 сохраняться\slash сохраниться;;se conserver;remain;0
 предохраняться\slash предохраниться;;se protéger;protect oneself;0
 возглавлять\slash возглавить;;être à la tête;be at the head;0
-возрастать\slash возрасти;;croître;grow;1
-нарастать\slash нарасти;;croître;grow (on);1
+возрастать\slash возрасти;;augmenter;grow;1
+нарастать\slash нарасти;;accroître;grow (on);1
 планироваться\slash спланировать;;être planifié;to be planned;0
 раздражать\slash раздражить;;irriter;irritate;0
 сниться\slash при-;;rêver;dream;0
@@ -407,7 +405,7 @@ verb;usage;transFr;transEn;yellow
 лгать\slash со-;;mentir;lie;1
 расширять\slash расширить;;élargir;widen;0
 гибнуть\slash по-;;mourir;die;1
-погибать\slash погибнуть;;être tué;be killed;1
+погибать\slash погибнуть;;avoir été tué;be killed;1
 таять\slash рас-;;fondre;melt;1
 рассы́паться\slash рассыпа́ться;;se répandre (poudre, idées);crumble, spill;0
 сы́пать\slash по-;;verser (poudre);sprinkle;1
@@ -435,7 +433,7 @@ verb;usage;transFr;transEn;yellow
 переворачивать\slash перевернуть;;retourner, renverser;turn, turn over;0
 подворачивать\slash подвернуть;;visser;screw a little;0
 казнить;;mettre à mort;put to death;0
-взаимодействовать;;coopérer;interact;1
+взаимодействовать\slash про-;;coopérer;interact;1
 устраиваться\slash устроиться;;s'installer;settle down;0
 настраивать\slash настроить;;régler, configurer;tune (up, in);0
 выстраивать\slash выстроить;;bâtir;draw up;0

@@ -15,7 +15,7 @@ intermediate := B2
 advanced := C1 C2
 
 today := $(shell date +%Y/%m/%d)
-version_ru_fr := $(today) - vBeta
+version_ru_fr := $(today) - vBeta-1.0
 footer_fr := ./tex/footer-fr.tex
 version_ru_en := $(today) - vAlpha
 footer_en := ./tex/footer-en.tex
